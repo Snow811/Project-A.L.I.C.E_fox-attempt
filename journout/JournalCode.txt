@@ -1,0 +1,798 @@
+else if (EventName == "ApproachBody")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ApproachBody>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ApproachBody.Logic();
+}
+else if (EventName == "ApproachSettlement")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ApproachSettlement>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ApproachSettlement.Logic();
+}
+else if (EventName == "Backpack")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Backpack>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Backpack.Logic();
+}
+else if (EventName == "BackpackChange")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.BackpackChange>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.BackpackChange.Logic();
+}
+else if (EventName == "BookDropship")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.BookDropship>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.BookDropship.Logic();
+}
+else if (EventName == "Bounty")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Bounty>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Bounty.Logic();
+}
+else if (EventName == "BuyAmmo")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.BuyAmmo>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.BuyAmmo.Logic();
+}
+else if (EventName == "Cargo")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Cargo>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Cargo.Logic();
+}
+else if (EventName == "CargoDepot")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CargoDepot>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CargoDepot.Logic();
+}
+else if (EventName == "CargoTransfer")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CargoTransfer>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CargoTransfer.Logic();
+}
+else if (EventName == "CarrierBankTransfer")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierBankTransfer>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierBankTransfer.Logic();
+}
+else if (EventName == "CarrierBuy")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierBuy>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierBuy.Logic();
+}
+else if (EventName == "CarrierCrewServices")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierCrewServices>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierCrewServices.Logic();
+}
+else if (EventName == "CarrierDecommission")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierDecommission>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierDecommission.Logic();
+}
+else if (EventName == "CarrierDepositFuel")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierDepositFuel>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierDepositFuel.Logic();
+}
+else if (EventName == "CarrierDockingPermission")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierDockingPermission>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierDockingPermission.Logic();
+}
+else if (EventName == "CarrierFinance")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierFinance>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierFinance.Logic();
+}
+else if (EventName == "CarrierJump")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierJump>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierJump.Logic();
+}
+else if (EventName == "CarrierJumpRequest")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierJumpRequest>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierJumpRequest.Logic();
+}
+else if (EventName == "CarrierLocation")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierLocation>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierLocation.Logic();
+}
+else if (EventName == "CarrierStats")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierStats>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierStats.Logic();
+}
+else if (EventName == "CarrierTradeOrder")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierTradeOrder>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierTradeOrder.Logic();
+}
+else if (EventName == "Commander")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Commander>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Commander.Logic();
+}
+else if (EventName == "CommitCrime")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CommitCrime>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CommitCrime.Logic();
+}
+else if (EventName == "CommunityGoal")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CommunityGoal>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CommunityGoal.Logic();
+}
+else if (EventName == "CommunityGoalJoin")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CommunityGoalJoin>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CommunityGoalJoin.Logic();
+}
+else if (EventName == "CommunityGoalReward")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CommunityGoalReward>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CommunityGoalReward.Logic();
+}
+else if (EventName == "CrewLaunchFighter")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CrewLaunchFighter>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CrewLaunchFighter.Logic();
+}
+else if (EventName == "CrimeVictim")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CrimeVictim>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CrimeVictim.Logic();
+}
+else if (EventName == "Disembark")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Disembark>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Disembark.Logic();
+}
+else if (EventName == "Docked")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Docked>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Docked.Logic();
+}
+else if (EventName == "DockingCancelled")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.DockingCancelled>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.DockingCancelled.Logic();
+}
+else if (EventName == "DockingDenied")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.DockingDenied>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.DockingDenied.Logic();
+}
+else if (EventName == "DockingGranted")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.DockingGranted>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.DockingGranted.Logic();
+}
+else if (EventName == "DockingRequested")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.DockingRequested>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.DockingRequested.Logic();
+}
+else if (EventName == "DockSRV")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.DockSRV>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.DockSRV.Logic();
+}
+else if (EventName == "DropshipDeploy")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.DropshipDeploy>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.DropshipDeploy.Logic();
+}
+else if (EventName == "Embark")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Embark>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Embark.Logic();
+}
+else if (EventName == "EngineerCraft")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.EngineerCraft>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.EngineerCraft.Logic();
+}
+else if (EventName == "EngineerProgress")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.EngineerProgress>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.EngineerProgress.Logic();
+}
+else if (EventName == "EscapeInterdiction")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.EscapeInterdiction>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.EscapeInterdiction.Logic();
+}
+else if (EventName == "FactionKillBond")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FactionKillBond>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FactionKillBond.Logic();
+}
+else if (EventName == "FetchRemoteModule")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FetchRemoteModule>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FetchRemoteModule.Logic();
+}
+else if (EventName == "FighterDestroyed")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FighterDestroyed>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FighterDestroyed.Logic();
+}
+else if (EventName == "FighterRebuilt")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FighterRebuilt>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FighterRebuilt.Logic();
+}
+else if (EventName == "Fileheader")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Fileheader>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Fileheader.Logic();
+}
+else if (EventName == "Friends")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Friends>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Friends.Logic();
+}
+else if (EventName == "FSDJump")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FSDJump>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FSDJump.Logic();
+}
+else if (EventName == "FSDTarget")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FSDTarget>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FSDTarget.Logic();
+}
+else if (EventName == "FSSAllBodiesFound")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FSSAllBodiesFound>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FSSAllBodiesFound.Logic();
+}
+else if (EventName == "FSSDiscoveryScan")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FSSDiscoveryScan>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FSSDiscoveryScan.Logic();
+}
+else if (EventName == "FSSSignalDiscovered")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FSSSignalDiscovered>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FSSSignalDiscovered.Logic();
+}
+else if (EventName == "FuelScoop")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.FuelScoop>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.FuelScoop.Logic();
+}
+else if (EventName == "HeatDamage")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.HeatDamage>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.HeatDamage.Logic();
+}
+else if (EventName == "HeatWarning")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.HeatWarning>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.HeatWarning.Logic();
+}
+else if (EventName == "HullDamage")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.HullDamage>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.HullDamage.Logic();
+}
+else if (EventName == "Interdicted")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Interdicted>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Interdicted.Logic();
+}
+else if (EventName == "JetConeBoost")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.JetConeBoost>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.JetConeBoost.Logic();
+}
+else if (EventName == "LaunchSRV")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.LaunchSRV>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.LaunchSRV.Logic();
+}
+else if (EventName == "LeaveBody")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.LeaveBody>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.LeaveBody.Logic();
+}
+else if (EventName == "Liftoff")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Liftoff>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Liftoff.Logic();
+}
+else if (EventName == "LoadGame")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.LoadGame>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.LoadGame.Logic();
+}
+else if (EventName == "Loadout")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Loadout>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Loadout.Logic();
+}
+else if (EventName == "LoadoutEquipModule")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.LoadoutEquipModule>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.LoadoutEquipModule.Logic();
+}
+else if (EventName == "Location")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Location>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Location.Logic();
+}
+else if (EventName == "Market")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Market>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Market.Logic();
+}
+else if (EventName == "MarketBuy")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.MarketBuy>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.MarketBuy.Logic();
+}
+else if (EventName == "MarketSell")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.MarketSell>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.MarketSell.Logic();
+}
+else if (EventName == "MaterialCollected")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.MaterialCollected>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.MaterialCollected.Logic();
+}
+else if (EventName == "Materials")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Materials>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Materials.Logic();
+}
+else if (EventName == "MaterialTrade")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.MaterialTrade>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.MaterialTrade.Logic();
+}
+else if (EventName == "MissionAccepted")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.MissionAccepted>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.MissionAccepted.Logic();
+}
+else if (EventName == "MissionCompleted")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.MissionCompleted>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.MissionCompleted.Logic();
+}
+else if (EventName == "MissionRedirected")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.MissionRedirected>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.MissionRedirected.Logic();
+}
+else if (EventName == "Missions")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Missions>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Missions.Logic();
+}
+else if (EventName == "ModuleBuy")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ModuleBuy>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ModuleBuy.Logic();
+}
+else if (EventName == "ModuleInfo")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ModuleInfo>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ModuleInfo.Logic();
+}
+else if (EventName == "ModuleRetrieve")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ModuleRetrieve>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ModuleRetrieve.Logic();
+}
+else if (EventName == "ModuleSell")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ModuleSell>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ModuleSell.Logic();
+}
+else if (EventName == "ModuleSellRemote")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ModuleSellRemote>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ModuleSellRemote.Logic();
+}
+else if (EventName == "ModuleStore")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ModuleStore>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ModuleStore.Logic();
+}
+else if (EventName == "MultiSellExplorationData")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.MultiSellExplorationData>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.MultiSellExplorationData.Logic();
+}
+else if (EventName == "Music")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Music>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Music.Logic();
+}
+else if (EventName == "NavBeaconScan")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.NavBeaconScan>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.NavBeaconScan.Logic();
+}
+else if (EventName == "NavRoute")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.NavRoute>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.NavRoute.Logic();
+}
+else if (EventName == "NavRouteClear")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.NavRouteClear>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.NavRouteClear.Logic();
+}
+else if (EventName == "NpcCrewPaidWage")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.NpcCrewPaidWage>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.NpcCrewPaidWage.Logic();
+}
+else if (EventName == "Outfitting")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Outfitting>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Outfitting.Logic();
+}
+else if (EventName == "PayFines")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.PayFines>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.PayFines.Logic();
+}
+else if (EventName == "Progress")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Progress>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Progress.Logic();
+}
+else if (EventName == "Promotion")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Promotion>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Promotion.Logic();
+}
+else if (EventName == "Rank")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Rank>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Rank.Logic();
+}
+else if (EventName == "ReceiveText")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ReceiveText>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ReceiveText.Logic();
+}
+else if (EventName == "RedeemVoucher")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.RedeemVoucher>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.RedeemVoucher.Logic();
+}
+else if (EventName == "RefuelAll")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.RefuelAll>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.RefuelAll.Logic();
+}
+else if (EventName == "Repair")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Repair>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Repair.Logic();
+}
+else if (EventName == "RepairAll")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.RepairAll>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.RepairAll.Logic();
+}
+else if (EventName == "Reputation")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Reputation>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Reputation.Logic();
+}
+else if (EventName == "ReservoirReplenished")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ReservoirReplenished>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ReservoirReplenished.Logic();
+}
+else if (EventName == "RestockVehicle")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.RestockVehicle>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.RestockVehicle.Logic();
+}
+else if (EventName == "Resurrect")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Resurrect>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Resurrect.Logic();
+}
+else if (EventName == "Scan")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Scan>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Scan.Logic();
+}
+else if (EventName == "ScanBaryCentre")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ScanBaryCentre>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ScanBaryCentre.Logic();
+}
+else if (EventName == "Scanned")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Scanned>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Scanned.Logic();
+}
+else if (EventName == "SendText")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SendText>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SendText.Logic();
+}
+else if (EventName == "ShieldState")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ShieldState>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ShieldState.Logic();
+}
+else if (EventName == "ShipLocker")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ShipLocker>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ShipLocker.Logic();
+}
+else if (EventName == "ShipTargeted")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ShipTargeted>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ShipTargeted.Logic();
+}
+else if (EventName == "Shipyard")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Shipyard>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Shipyard.Logic();
+}
+else if (EventName == "ShipyardBankDeposit")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ShipyardBankDeposit>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ShipyardBankDeposit.Logic();
+}
+else if (EventName == "ShipyardBuy")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ShipyardBuy>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ShipyardBuy.Logic();
+}
+else if (EventName == "ShipyardNew")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ShipyardNew>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ShipyardNew.Logic();
+}
+else if (EventName == "ShipyardSwap")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ShipyardSwap>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ShipyardSwap.Logic();
+}
+else if (EventName == "ShipyardTransfer")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ShipyardTransfer>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ShipyardTransfer.Logic();
+}
+else if (EventName == "Shutdown")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Shutdown>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Shutdown.Logic();
+}
+else if (EventName == "SquadronStartup")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SquadronStartup>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SquadronStartup.Logic();
+}
+else if (EventName == "StartJump")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.StartJump>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.StartJump.Logic();
+}
+else if (EventName == "Statistics")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Statistics>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Statistics.Logic();
+}
+else if (EventName == "StoredModules")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.StoredModules>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.StoredModules.Logic();
+}
+else if (EventName == "StoredShips")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.StoredShips>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.StoredShips.Logic();
+}
+else if (EventName == "SuitLoadout")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SuitLoadout>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SuitLoadout.Logic();
+}
+else if (EventName == "SupercruiseDestinationDrop")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SupercruiseDestinationDrop>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SupercruiseDestinationDrop.Logic();
+}
+else if (EventName == "SupercruiseEntry")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SupercruiseEntry>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SupercruiseEntry.Logic();
+}
+else if (EventName == "SupercruiseExit")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SupercruiseExit>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SupercruiseExit.Logic();
+}
+else if (EventName == "Synthesis")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Synthesis>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Synthesis.Logic();
+}
+else if (EventName == "Touchdown")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Touchdown>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Touchdown.Logic();
+}
+else if (EventName == "UnderAttack")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.UnderAttack>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.UnderAttack.Logic();
+}
+else if (EventName == "Undocked")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Undocked>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Undocked.Logic();
+}
+else if (EventName == "UseConsumable")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.UseConsumable>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.UseConsumable.Logic();
+}
+else if (EventName == "USSDrop")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.USSDrop>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.USSDrop.Logic();
+}
+else if (EventName == "WingAdd")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.WingAdd>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.WingAdd.Logic();
+}
+else if (EventName == "WingJoin")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.WingJoin>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.WingJoin.Logic();
+}
+else if (EventName == "WingLeave")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.WingLeave>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.WingLeave.Logic();
+}
