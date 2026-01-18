@@ -31,9 +31,15 @@ echo.
 
 REM Restore NuGet packages
 echo Restoring NuGet packages...
-nuget restore "Project A.L.I.C.E.sln"
+where nuget >nul 2>nul
 if %ERRORLEVEL% NEQ 0 (
-    echo WARNING: NuGet restore failed. Continuing anyway...
+    echo WARNING: NuGet not found. Skipping package restore...
+    echo If build fails, please install NuGet and run: nuget restore "Project A.L.I.C.E.sln"
+) else (
+    nuget restore "Project A.L.I.C.E.sln"
+    if %ERRORLEVEL% NEQ 0 (
+        echo WARNING: NuGet restore failed. Continuing anyway...
+    )
 )
 echo.
 

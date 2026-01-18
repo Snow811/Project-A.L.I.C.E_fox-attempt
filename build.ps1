@@ -41,6 +41,9 @@ Write-Host "Restoring NuGet packages..." -ForegroundColor Yellow
 $nugetPath = Get-Command nuget -ErrorAction SilentlyContinue
 if ($nugetPath) {
     & nuget restore "Project A.L.I.C.E.sln"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "WARNING: NuGet restore failed. Continuing anyway..." -ForegroundColor Yellow
+    }
 } else {
     Write-Host "WARNING: NuGet not found. Skipping package restore..." -ForegroundColor Yellow
 }
