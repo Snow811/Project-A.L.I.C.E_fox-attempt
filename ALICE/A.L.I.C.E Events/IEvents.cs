@@ -69,12 +69,28 @@ namespace ALICE_Events
                 case IEnums.Events.ApproachBody: ApproachBody.Logic(); break;
                 case IEnums.Events.ApproachSettlement: ApproachSettlement.Logic(); break;
                 case IEnums.Events.AsteroidCracked: AsteroidCracked.Logic(); break;
+                case IEnums.Events.Backpack: Backpack.Logic(); break;
+                case IEnums.Events.BackpackChange: BackpackChange.Logic(); break;
+                case IEnums.Events.BookDropship: BookDropship.Logic(); break;
                 case IEnums.Events.Bounty: Bounty.Logic(); break;
                 case IEnums.Events.BuyAmmo: BuyAmmo.Logic(); break;
                 case IEnums.Events.BuyDrones: BuyDrones.Logic(); break;
                 case IEnums.Events.BuyExplorationData: BuyExplorationData.Logic(); break;
                 case IEnums.Events.BuyTradeData: BuyTradeData.Logic(); break;
                 case IEnums.Events.CargoDepot: CargoDepot.Logic(); break;
+                case IEnums.Events.CargoTransfer: CargoTransfer.Logic(); break;
+                case IEnums.Events.CarrierBankTransfer: CarrierBankTransfer.Logic(); break;
+                case IEnums.Events.CarrierBuy: CarrierBuy.Logic(); break;
+                case IEnums.Events.CarrierCrewServices: CarrierCrewServices.Logic(); break;
+                case IEnums.Events.CarrierDecommission: CarrierDecommission.Logic(); break;
+                case IEnums.Events.CarrierDepositFuel: CarrierDepositFuel.Logic(); break;
+                case IEnums.Events.CarrierDockingPermission: CarrierDockingPermission.Logic(); break;
+                case IEnums.Events.CarrierFinance: CarrierFinance.Logic(); break;
+                case IEnums.Events.CarrierJump: CarrierJump.Logic(); break;
+                case IEnums.Events.CarrierJumpRequest: CarrierJumpRequest.Logic(); break;
+                case IEnums.Events.CarrierLocation: CarrierLocation.Logic(); break;
+                case IEnums.Events.CarrierStats: CarrierStats.Logic(); break;
+                case IEnums.Events.CarrierTradeOrder: CarrierTradeOrder.Logic(); break;
                 case IEnums.Events.ChangeCrewRole: ChangeCrewRole.Logic(); break;
                 case IEnums.Events.ClearSaveGame: ClearSaveGame.Logic(); break;
                 case IEnums.Events.CockpitBreached: CockpitBreached.Logic(); break;
@@ -83,21 +99,29 @@ namespace ALICE_Events
                 case IEnums.Events.Commander: Commander.Logic(); break;
                 case IEnums.Events.CommitCrime: CommitCrime.Logic(); break;
                 case IEnums.Events.CommunityGoal: CommunityGoal.Logic(); break;
+                case IEnums.Events.CommunityGoalJoin: CommunityGoalJoin.Logic(); break;
+                case IEnums.Events.CommunityGoalReward: CommunityGoalReward.Logic(); break;
                 case IEnums.Events.CrewAssign: CrewAssign.Logic(); break;
                 case IEnums.Events.CrewFire: CrewFire.Logic(); break;
                 case IEnums.Events.CrewHire: CrewHire.Logic(); break;
+                case IEnums.Events.CrewLaunchFighter: CrewLaunchFighter.Logic(); break;
+                case IEnums.Events.CrimeVictim: CrimeVictim.Logic(); break;
                 case IEnums.Events.DatalinkScan: DatalinkScan.Logic(); break;
                 case IEnums.Events.DatalinkVoucher: DatalinkVoucher.Logic(); break;
                 case IEnums.Events.DataScanned: DataScanned.Logic(); break;
                 case IEnums.Events.Died: Died.Logic(); break;
+                case IEnums.Events.Disembark: Disembark.Logic(); break;
                 case IEnums.Events.Docked: Docked.Logic(); break;
                 case IEnums.Events.DockFighter: DockFighter.Logic(); break;
                 case IEnums.Events.DockingCancelled: DockingCancelled.Logic(); break;
+                case IEnums.Events.DockingDenied: DockingDenied.Logic(); break;
                 case IEnums.Events.DockingGranted: DockingGranted.Logic(); break;
                 case IEnums.Events.DockingRequested: DockingRequested.Logic(); break;
                 case IEnums.Events.DockingTimeout: DockingTimeout.Logic(); break;
                 case IEnums.Events.DockSRV: DockSRV.Logic(); break;
+                case IEnums.Events.DropshipDeploy: DropshipDeploy.Logic(); break;
                 case IEnums.Events.EjectCargo: EjectCargo.Logic(); break;
+                case IEnums.Events.Embark: Embark.Logic(); break;
                 case IEnums.Events.EngineerContribution: EngineerContribution.Logic(); break;
                 case IEnums.Events.EngineerCraft: EngineerCraft.Logic(); break;
                 case IEnums.Events.EngineerProgress: EngineerProgress.Logic(); break;
@@ -126,6 +150,7 @@ namespace ALICE_Events
                 case IEnums.Events.Liftoff: Liftoff.Logic(); break;
                 case IEnums.Events.LoadGame: LoadGame.Logic(); break;
                 case IEnums.Events.Loadout: Loadout.Logic(); break;
+                case IEnums.Events.LoadoutEquipModule: LoadoutEquipModule.Logic(); break;
                 case IEnums.Events.Location: Location.Logic(); break;
                 case IEnums.Events.MarketBuy: MarketBuy.Logic(); break;
                 case IEnums.Events.MarketSell: MarketSell.Logic(); break;
@@ -151,6 +176,8 @@ namespace ALICE_Events
                 case IEnums.Events.MultiSellExplorationData: MultiSellExplorationData.Logic(); break;
                 case IEnums.Events.Music: Music.Logic(); break;
                 case IEnums.Events.NavBeaconScan: NavBeaconScan.Logic(); break;
+                case IEnums.Events.NavRoute: NavRoute.Logic(); break;
+                case IEnums.Events.NavRouteClear: NavRouteClear.Logic(); break;
                 case IEnums.Events.NpcCrewPaidWage: NpcCrewPaidWage.Logic(); break;
                 case IEnums.Events.NpcCrewRank: NpcCrewRank.Logic(); break;
                 case IEnums.Events.PayBounties: PayBounties.Logic(); break;
@@ -182,6 +209,7 @@ namespace ALICE_Events
                 case IEnums.Events.Resurrect: Resurrect.Logic(); break;
                 case IEnums.Events.SAAScanComplete: SAAScanComplete.Logic(); break;
                 case IEnums.Events.Scan: Scan.Logic(); break;
+                case IEnums.Events.ScanBaryCentre: ScanBaryCentre.Logic(); break;
                 case IEnums.Events.Scanned: Scanned.Logic(); break;
                 case IEnums.Events.ScientificResearch: ScientificResearch.Logic(); break;
                 case IEnums.Events.Screenshot: Screenshot.Logic(); break;
@@ -192,7 +220,9 @@ namespace ALICE_Events
                 case IEnums.Events.SendText: SendText.Logic(); break;
                 case IEnums.Events.SetUserShipName: SetUserShipName.Logic(); break;
                 case IEnums.Events.ShieldState: ShieldState.Logic(); break;
+                case IEnums.Events.ShipLocker: ShipLocker.Logic(); break;
                 case IEnums.Events.ShipTargeted: ShipTargeted.Logic(); break;
+                case IEnums.Events.ShipyardBankDeposit: ShipyardBankDeposit.Logic(); break;
                 case IEnums.Events.ShipyardBuy: ShipyardBuy.Logic(); break;
                 case IEnums.Events.ShipyardNew: ShipyardNew.Logic(); break;
                 case IEnums.Events.ShipyardSwap: ShipyardSwap.Logic(); break;
@@ -203,6 +233,8 @@ namespace ALICE_Events
                 case IEnums.Events.Statistics: Statistics.Logic(); break;
                 case IEnums.Events.StoredModules: StoredModules.Logic(); break;
                 case IEnums.Events.StoredShips: StoredShips.Logic(); break;
+                case IEnums.Events.SuitLoadout: SuitLoadout.Logic(); break;
+                case IEnums.Events.SupercruiseDestinationDrop: SupercruiseDestinationDrop.Logic(); break;
                 case IEnums.Events.SupercruiseEntry: SupercruiseEntry.Logic(); break;
                 case IEnums.Events.SupercruiseExit: SupercruiseExit.Logic(); break;
                 case IEnums.Events.Synthesis: Synthesis.Logic(); break;
@@ -213,6 +245,7 @@ namespace ALICE_Events
                 case IEnums.Events.UnderAttack: UnderAttack.Logic(); break;
                 case IEnums.Events.Undocked: Undocked.Logic(); break;
                 case IEnums.Events.USSDrop: USSDrop.Logic(); break;
+                case IEnums.Events.UseConsumable: UseConsumable.Logic(); break;
                 case IEnums.Events.VehicleSwitch: VehicleSwitch.Logic(); break;
                 case IEnums.Events.WingAdd: WingAdd.Logic(); break;
                 case IEnums.Events.WingInvite: WingInvite.Logic(); break;
@@ -296,6 +329,9 @@ namespace ALICE_Events
         #endregion
 
         #region B
+        public static Event_Backpack Backpack = new Event_Backpack();
+        public static Event_BackpackChange BackpackChange = new Event_BackpackChange();
+        public static Event_BookDropship BookDropship = new Event_BookDropship();
         public static Event_Bounty Bounty = new Event_Bounty();
         public static Event_BuyAmmo BuyAmmo = new Event_BuyAmmo();
         public static Event_BuyDrones BuyDrones = new Event_BuyDrones();
@@ -306,6 +342,19 @@ namespace ALICE_Events
         #region C
         public static Event_Cargo Cargo = new Event_Cargo();
         public static Event_CargoDepot CargoDepot = new Event_CargoDepot();
+        public static Event_CargoTransfer CargoTransfer = new Event_CargoTransfer();
+        public static Event_CarrierBankTransfer CarrierBankTransfer = new Event_CarrierBankTransfer();
+        public static Event_CarrierBuy CarrierBuy = new Event_CarrierBuy();
+        public static Event_CarrierCrewServices CarrierCrewServices = new Event_CarrierCrewServices();
+        public static Event_CarrierDecommission CarrierDecommission = new Event_CarrierDecommission();
+        public static Event_CarrierDepositFuel CarrierDepositFuel = new Event_CarrierDepositFuel();
+        public static Event_CarrierDockingPermission CarrierDockingPermission = new Event_CarrierDockingPermission();
+        public static Event_CarrierFinance CarrierFinance = new Event_CarrierFinance();
+        public static Event_CarrierJump CarrierJump = new Event_CarrierJump();
+        public static Event_CarrierJumpRequest CarrierJumpRequest = new Event_CarrierJumpRequest();
+        public static Event_CarrierLocation CarrierLocation = new Event_CarrierLocation();
+        public static Event_CarrierStats CarrierStats = new Event_CarrierStats();
+        public static Event_CarrierTradeOrder CarrierTradeOrder = new Event_CarrierTradeOrder();
         public static Event_ChangeCrewRole ChangeCrewRole = new Event_ChangeCrewRole();
         public static Event_ClearSaveGame ClearSaveGame = new Event_ClearSaveGame();
         public static Event_CockpitBreached CockpitBreached = new Event_CockpitBreached();
@@ -314,28 +363,35 @@ namespace ALICE_Events
         public static Event_Commander Commander = new Event_Commander();
         public static Event_CommitCrime CommitCrime = new Event_CommitCrime();
         public static Event_CommunityGoal CommunityGoal = new Event_CommunityGoal();
+        public static Event_CommunityGoalJoin CommunityGoalJoin = new Event_CommunityGoalJoin();
+        public static Event_CommunityGoalReward CommunityGoalReward = new Event_CommunityGoalReward();
         public static Event_CrewAssign CrewAssign = new Event_CrewAssign();
         public static Event_CrewFire CrewFire = new Event_CrewFire();
         public static Event_CrewHire CrewHire = new Event_CrewHire();
+        public static Event_CrewLaunchFighter CrewLaunchFighter = new Event_CrewLaunchFighter();
+        public static Event_CrimeVictim CrimeVictim = new Event_CrimeVictim();
         #endregion
 
         #region D
         public static Event_DatalinkScan DatalinkScan = new Event_DatalinkScan();
         public static Event_DataScanned DataScanned = new Event_DataScanned();
         public static Event_DatalinkVoucher DatalinkVoucher = new Event_DatalinkVoucher();
-        public static Event_Died Died = new Event_Died();        
+        public static Event_Died Died = new Event_Died();
+        public static Event_Disembark Disembark = new Event_Disembark();
         public static Event_Docked Docked = new Event_Docked();
         public static Event_DockFighter DockFighter = new Event_DockFighter();
         public static Event_DockingCancelled DockingCancelled = new Event_DockingCancelled();
-        public static Event_DockingTimeout DockingTimeout = new Event_DockingTimeout();
         public static Event_DockingDenied DockingDenied = new Event_DockingDenied();
         public static Event_DockingGranted DockingGranted = new Event_DockingGranted();
         public static Event_DockingRequested DockingRequested = new Event_DockingRequested();
+        public static Event_DockingTimeout DockingTimeout = new Event_DockingTimeout();
         public static Event_DockSRV DockSRV = new Event_DockSRV();
+        public static Event_DropshipDeploy DropshipDeploy = new Event_DropshipDeploy();
         #endregion
 
         #region E
         public static Event_EjectCargo EjectCargo = new Event_EjectCargo();
+        public static Event_Embark Embark = new Event_Embark();
         public static Event_EscapeInterdiction EscapeInterdiction = new Event_EscapeInterdiction();
         public static Event_EngineerContribution EngineerContribution = new Event_EngineerContribution();
         public static Event_EngineerCraft EngineerCraft = new Event_EngineerCraft();
@@ -385,6 +441,7 @@ namespace ALICE_Events
         public static Event_Liftoff Liftoff = new Event_Liftoff();
         public static Event_LoadGame LoadGame = new Event_LoadGame();
         public static Event_Loadout Loadout = new Event_Loadout();
+        public static Event_LoadoutEquipModule LoadoutEquipModule = new Event_LoadoutEquipModule();
         public static Event_Location Location = new Event_Location();
         #endregion
 
@@ -417,6 +474,8 @@ namespace ALICE_Events
 
         #region N
         public static Event_NavBeaconScan NavBeaconScan = new Event_NavBeaconScan();
+        public static Event_NavRoute NavRoute = new Event_NavRoute();
+        public static Event_NavRouteClear NavRouteClear = new Event_NavRouteClear();
         public static Event_NpcCrewPaidWage NpcCrewPaidWage = new Event_NpcCrewPaidWage();
         public static Event_NpcCrewRank NpcCrewRank = new Event_NpcCrewRank();
         #endregion
@@ -464,6 +523,7 @@ namespace ALICE_Events
         #region S
         public static Event_SAAScanComplete SAAScanComplete = new Event_SAAScanComplete();
         public static Event_Scan Scan = new Event_Scan();
+        public static Event_ScanBaryCentre ScanBaryCentre = new Event_ScanBaryCentre();
         public static Event_Scanned Scanned = new Event_Scanned();
         public static Event_Screenshot Screenshot = new Event_Screenshot();
         public static Event_SellDrones SellDrones = new Event_SellDrones();
@@ -471,8 +531,10 @@ namespace ALICE_Events
         public static Event_SendText SendText = new Event_SendText();
         public static Event_SetUserShipName SetUserShipName = new Event_SetUserShipName();
         public static Event_ShieldState ShieldState = new Event_ShieldState();
+        public static Event_ShipLocker ShipLocker = new Event_ShipLocker();
         public static Event_ShipTargeted ShipTargeted = new Event_ShipTargeted();
         public static Event_Shipyard Shipyard = new Event_Shipyard();
+        public static Event_ShipyardBankDeposit ShipyardBankDeposit = new Event_ShipyardBankDeposit();
         public static Event_ShipyardBuy ShipyardBuy = new Event_ShipyardBuy();
         public static Event_ShipyardNew ShipyardNew = new Event_ShipyardNew();
         public static Event_ShipyardSwap ShipyardSwap = new Event_ShipyardSwap();
@@ -482,6 +544,8 @@ namespace ALICE_Events
         public static Event_Statistics Statistics = new Event_Statistics();
         public static Event_StoredModules StoredModules = new Event_StoredModules();
         public static Event_StoredShips StoredShips = new Event_StoredShips();
+        public static Event_SuitLoadout SuitLoadout = new Event_SuitLoadout();
+        public static Event_SupercruiseDestinationDrop SupercruiseDestinationDrop = new Event_SupercruiseDestinationDrop();
         public static Event_SupercruiseEntry SupercruiseEntry = new Event_SupercruiseEntry();
         public static Event_SupercruiseExit SupercruiseExit = new Event_SupercruiseExit();
         public static Event_Synthesis Synthesis = new Event_Synthesis();
@@ -501,7 +565,8 @@ namespace ALICE_Events
         #region U
         public static Event_UnderAttack UnderAttack = new Event_UnderAttack();
         public static Event_Undocked Undocked = new Event_Undocked();
-        public static Event_USSDrop USSDrop = new Event_USSDrop();        
+        public static Event_USSDrop USSDrop = new Event_USSDrop();
+        public static Event_UseConsumable UseConsumable = new Event_UseConsumable();
         #endregion
 
         #region V
