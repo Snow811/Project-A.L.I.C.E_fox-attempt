@@ -4,6 +4,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
