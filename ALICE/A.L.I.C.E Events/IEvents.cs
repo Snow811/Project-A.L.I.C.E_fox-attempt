@@ -381,10 +381,10 @@ namespace ALICE_Events
         public static Event_Docked Docked = new Event_Docked();
         public static Event_DockFighter DockFighter = new Event_DockFighter();
         public static Event_DockingCancelled DockingCancelled = new Event_DockingCancelled();
-        public static Event_DockingTimeout DockingTimeout = new Event_DockingTimeout();
         public static Event_DockingDenied DockingDenied = new Event_DockingDenied();
         public static Event_DockingGranted DockingGranted = new Event_DockingGranted();
         public static Event_DockingRequested DockingRequested = new Event_DockingRequested();
+        public static Event_DockingTimeout DockingTimeout = new Event_DockingTimeout();
         public static Event_DockSRV DockSRV = new Event_DockSRV();
         public static Event_DropshipDeploy DropshipDeploy = new Event_DropshipDeploy();
         #endregion
