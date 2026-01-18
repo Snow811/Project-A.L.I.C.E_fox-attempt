@@ -56,12 +56,28 @@ namespace ALICE_Internal
             ApproachBody,                     //Journal Log
             ApproachSettlement,               //Journal Log
             AsteroidCracked,                  //Journal Log
+            Backpack,                         //Journal Log
+            BackpackChange,                   //Journal Log
+            BookDropship,                     //Journal Log
             Bounty,                           //Journal Log
             BuyAmmo,                          //Journal Log
             BuyDrones,                        //Journal Log
             BuyExplorationData,               //Journal Log
             BuyTradeData,                     //Journal Log
             CargoDepot,                       //Journal Log
+            CargoTransfer,                    //Journal Log
+            CarrierBankTransfer,              //Journal Log
+            CarrierBuy,                       //Journal Log
+            CarrierCrewServices,              //Journal Log
+            CarrierDecommission,              //Journal Log
+            CarrierDepositFuel,               //Journal Log
+            CarrierDockingPermission,         //Journal Log
+            CarrierFinance,                   //Journal Log
+            CarrierJump,                      //Journal Log
+            CarrierJumpRequest,               //Journal Log
+            CarrierLocation,                  //Journal Log
+            CarrierStats,                     //Journal Log
+            CarrierTradeOrder,                //Journal Log
             ChangeCrewRole,                   //Journal Log
             ClearSaveGame,                    //Journal Log
             CockpitBreached,                  //Journal Log
@@ -70,21 +86,29 @@ namespace ALICE_Internal
             Commander,                        //Journal Log
             CommitCrime,                      //Journal Log
             CommunityGoal,                    //Journal Log
+            CommunityGoalJoin,                //Journal Log
+            CommunityGoalReward,              //Journal Log
             CrewAssign,                       //Journal Log
             CrewFire,                         //Journal Log
             CrewHire,                         //Journal Log
+            CrewLaunchFighter,                //Journal Log
+            CrimeVictim,                      //Journal Log
             DatalinkScan,                     //Journal Log
             DatalinkVoucher,                  //Journal Log
             DataScanned,                      //Journal Log
             Died,                             //Journal Log
+            Disembark,                        //Journal Log
             Docked,                           //Journal Log
             DockFighter,                      //Journal Log
             DockingCancelled,                 //Journal Log
+            DockingDenied,                    //Journal Log
             DockingGranted,                   //Journal Log
             DockingRequested,                 //Journal Log
             DockingTimeout,                   //Journal Log
             DockSRV,                          //Journal Log
+            DropshipDeploy,                   //Journal Log
             EjectCargo,                       //Journal Log
+            Embark,                           //Journal Log
             EngineerContribution,             //Journal Log
             EngineerCraft,                    //Journal Log
             EngineerProgress,                 //Journal Log
@@ -113,6 +137,7 @@ namespace ALICE_Internal
             Liftoff,                          //Journal Log
             LoadGame,                         //Journal Log
             Loadout,                          //Journal Log
+            LoadoutEquipModule,               //Journal Log
             Location,                         //Journal Log
             MarketBuy,                        //Journal Log
             MarketSell,                       //Journal Log
@@ -138,6 +163,8 @@ namespace ALICE_Internal
             MultiSellExplorationData,         //Journal Log
             Music,                            //Journal Log
             NavBeaconScan,                    //Journal Log
+            NavRoute,                         //Journal Log
+            NavRouteClear,                    //Journal Log
             NpcCrewPaidWage,                  //Journal Log
             NpcCrewRank,                      //Journal Log
             PayBounties,                      //Journal Log
@@ -169,6 +196,7 @@ namespace ALICE_Internal
             Resurrect,                        //Journal Log
             SAAScanComplete,                  //Journal Log
             Scan,                             //Journal Log
+            ScanBaryCentre,                   //Journal Log
             Scanned,                          //Journal Log
             ScientificResearch,               //Journal Log
             Screenshot,                       //Journal Log
@@ -179,7 +207,9 @@ namespace ALICE_Internal
             SendText,                         //Journal Log
             SetUserShipName,                  //Journal Log
             ShieldState,                      //Journal Log
+            ShipLocker,                       //Journal Log
             ShipTargeted,                     //Journal Log
+            ShipyardBankDeposit,              //Journal Log
             ShipyardBuy,                      //Journal Log
             ShipyardNew,                      //Journal Log
             ShipyardSwap,                     //Journal Log
@@ -190,6 +220,8 @@ namespace ALICE_Internal
             Statistics,                       //Journal Log
             StoredModules,                    //Journal Log
             StoredShips,                      //Journal Log
+            SuitLoadout,                      //Journal Log
+            SupercruiseDestinationDrop,       //Journal Log
             SupercruiseEntry,                 //Journal Log
             SupercruiseExit,                  //Journal Log
             Synthesis,                        //Journal Log
@@ -200,6 +232,7 @@ namespace ALICE_Internal
             UnderAttack,                      //Journal Log
             Undocked,                         //Journal Log
             USSDrop,                          //Journal Log
+            UseConsumable,                    //Journal Log
             VehicleSwitch,                    //Journal Log
             WingAdd,                          //Journal Log
             WingInvite,                       //Journal Log
