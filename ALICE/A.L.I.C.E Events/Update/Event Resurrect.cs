@@ -24,11 +24,6 @@ namespace ALICE_Events
                     Variables_Generate();
                     Variables_Write();
                 }
-                catch (Exception ex)
-                {
-                    Internal.Exception(Name, "An Exception Occured While Updating Variables");
-                    Internal.Exception(Name, "Exception: " + ex);
-                }
             }
 
             //GameState.Logic_Resurrect((Resurrect)GetEvent());
