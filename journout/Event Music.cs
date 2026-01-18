@@ -22,7 +22,7 @@ namespace ALICE_Events
 
         public void Logic()
         {
-            if (Manager.WriteVariables && WriteVariables)
+            if (IEvents.WriteVariables && WriteVariables)
             {
                 try
                 {
@@ -32,8 +32,8 @@ namespace ALICE_Events
                 }
                 catch (Exception ex)
                 {
-                    Internal.Exception(Name, "An Exception Occured While Updating Variables");
-                    Internal.Exception(Name, "Exception: " + ex);
+                    Logger.Exception(Name, "An Exception Occured While Updating Variables");
+                    Logger.Exception(Name, "Exception: " + ex);
                 }
             }
 
@@ -44,7 +44,7 @@ namespace ALICE_Events
 
         public void Variables_Generate()
         {
-            Music Event = (Music)Manager.GetEvent(Name);
+            Music Event = (Music)GetEvent();
 
             Variables.Clear();
 
@@ -72,6 +72,6 @@ namespace ALICE_Events
 // else if (EventName == "Music")
 // {
 //     var Event = JsonConvert.DeserializeObject<ALICE_Events.Music>(RawLine);
-//     Manager.UpdateEvents(EventName, Event);
-//     Manager.Music.Logic();
+//     Event_Base.UpdateEvents(EventName, Event);
+//     IEvents.Music.Logic();
 // }
