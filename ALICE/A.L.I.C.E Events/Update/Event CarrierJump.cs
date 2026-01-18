@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-16T18:27:11Z", "event":"CarrierJump", "Docked":true, "StationName":"FXBX", "StationType":"FleetCarrier", "MarketID":3714546688, "StationFaction":{ "Name":"FleetCarrier" }, "StationGovernment":"$government_Carrier;", "StationGovernment_Localised":"Private Ownership", "StationServices":[ "dock", "autodock", "commodities", "contacts", "exploration", "outfitting", "crewlounge", "rearm", "refuel", "repair", "shipyard", "engineer", "flightcontroller", "stationoperations", "stationMenu", "carriermanagement", "carrierfuel", "livery", "socialspace", "bartender", "vistagenomics", "pioneersupplies", "squadronBank" ], "StationEconomy":"$economy_Carrier;", "StationEconomy_Localised":"Private Enterprise", "StationEconomies":[ { "Name":"$economy_Carrier;", "Name_Localised":"Private Enterprise", "Proportion":1.000000 } ], "Taxi":false, "Multicrew":false, "StarSystem":"Atlantis", "SystemAddress":633742463706, "StarPos":[65.87500,-117.96875,47.71875], "SystemAllegiance":"Empire", "SystemEconomy":"$economy_HighTech;", "SystemEconomy_Localised":"High Tech", "SystemSecondEconomy":"$economy_Refinery;", "SystemSecondEconomy_Localised":"Refinery", "SystemGovernment":"$government_Feudal;", "SystemGovernment_Localised":"Feudal", "SystemSecurity":"$SYSTEM_SECURITY_high;", "SystemSecurity_Localised":"High Security", "Population":30518996, "Body":"Atlantis A", "BodyID":1, "BodyType":"Star", "ControllingPower":"Aisling Duval", "Powers":[ "A. Lavigny-Duval", "Aisling Duval", "Zemina Torval" ], "PowerplayState":"Stronghold", "PowerplayStateControlProgress":0.320954, "PowerplayStateReinforcement":132, "PowerplayStateUndermining":18778, "Factions":[ { "Name":"Atlantis Empire League", "FactionState":"None", "Government":"Patronage", "Influence":0.157371, "Allegiance":"Empire", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "RecoveringStates":[ { "State":"PirateAttack", "Trend":0 }, { "State":"Election", "Trend":0 } ] }, { "Name":"Atlantis Jet Creative & Co", "FactionState":"None", "Government":"Corporate", "Influence":0.015936, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000 }, { "Name":"Union of Atlantis Labour", "FactionState":"None", "Government":"Democracy", "Influence":0.059761, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "PendingStates":[ { "State":"Outbreak", "Trend":0 } ] }, { "Name":"Empire's Hope", "FactionState":"None", "Government":"Patronage", "Influence":0.032869, "Allegiance":"Empire", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000 }, { "Name":"Camorra of Atlantis", "FactionState":"None", "Government":"Anarchy", "Influence":0.018924, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000 }, { "Name":"Prismatic Knights", "FactionState":"Boom", "Government":"Feudal", "Influence":0.637450, "Allegiance":"Empire", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "ActiveStates":[ { "State":"Boom" } ] }, { "Name":"Revelation to Chaos", "FactionState":"None", "Government":"Feudal", "Influence":0.077689, "Allegiance":"Empire", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "RecoveringStates":[ { "State":"Election", "Trend":0 } ] } ], "SystemFaction":{ "Name":"Prismatic Knights", "FactionState":"Boom" }, "Conflicts":[ { "WarType":"election", "Status":"", "Faction1":{ "Name":"Atlantis Empire League", "Stake":"", "WonDays":2 }, "Faction2":{ "Name":"Revelation to Chaos", "Stake":"Ayers City", "WonDays":1 } } ] }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_CarrierJump((CarrierJump)GetEvent());

@@ -33,34 +33,20 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (NpcCrewRank)O;
 
                 Variables.Record(Name + "_Name", Event.NpcCrewName);
                 Variables.Record(Name + "_ID", Event.NpcCrewId);
                 Variables.Record(Name + "_Rank", Event.RankCombat);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
 
         //Plugin Logic Process
         public override void Process(object O)
         {
-            try
-            {
                 var Event = (NpcCrewRank)O;
 
                 //Update Status Object
                 IStatus.Crew.Update(Event);
-            }
-            catch (Exception ex)
-            {
-                ExceptionProcess(Name, ex);
-            }
         }
     }
 }

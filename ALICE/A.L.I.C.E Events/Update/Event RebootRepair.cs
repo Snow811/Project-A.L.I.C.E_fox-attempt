@@ -3,7 +3,6 @@
 //Source Journal Line: { "timestamp":"2018-10-02T04:28:34Z", "event":"RebootRepair", "Modules":[ "MainEngines", "Tinyhardpoint1" ] }
 
 using System;
-using System.Collections.Generic;
 
 namespace ALICE_Events
 {
@@ -29,19 +28,12 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (RebootRepair)O;
 
                 int C = 0; foreach (var Module in Event.Modules)
                 {
                     Variables.Record(Name + "_Module" + C, Module);
                 }
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
     }
 }

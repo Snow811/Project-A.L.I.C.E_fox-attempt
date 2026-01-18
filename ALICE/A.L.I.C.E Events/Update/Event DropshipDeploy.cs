@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-10T21:37:18Z", "event":"DropshipDeploy", "StarSystem":"Kurmodiae", "SystemAddress":5856221500130, "Body":"Kurmodiae A 1 a", "BodyID":14, "OnStation":false, "OnPlanet":true }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_DropshipDeploy((DropshipDeploy)GetEvent());

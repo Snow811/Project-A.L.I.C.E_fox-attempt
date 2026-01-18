@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-12T11:07:05Z", "event":"EngineerProgress", "Engineers":[ { "Engineer":"Professor Palin", "EngineerID":300220, "Progress":"Invited" }, { "Engineer":"Felicity Farseer", "EngineerID":300100, "Progress":"Unlocked", "RankProgress":0, "Rank":5 }, { "Engineer":"Eleanor Bresa", "EngineerID":400011, "Progress":"Known" }, { "Engineer":"Hero Ferrari", "EngineerID":400003, "Progress":"Known" }, { "Engineer":"Jude Navarro", "EngineerID":400001, "Progress":"Known" }, { "Engineer":"Lori Jameson", "EngineerID":300230, "Progress":"Known" }, { "Engineer":"Bill Turner", "EngineerID":300010, "Progress":"Invited" }, { "Engineer":"Liz Ryder", "EngineerID":300080, "Progress":"Known" }, { "Engineer":"Rosa Dayette", "EngineerID":400012, "Progress":"Known" }, { "Engineer":"Juri Ishmaak", "EngineerID":300250, "Progress":"Invited" }, { "Engineer":"Zacariah Nemo", "EngineerID":300050, "Progress":"Known" }, { "Engineer":"Mel Brandon", "EngineerID":300280, "Progress":"Known" }, { "Engineer":"Selene Jean", "EngineerID":300210, "Progress":"Unlocked", "RankProgress":77, "Rank":4 }, { "Engineer":"Marco Qwent", "EngineerID":300200, "Progress":"Unlocked", "RankProgress":11, "Rank":4 }, { "Engineer":"Chloe Sedesi", "EngineerID":300300, "Progress":"Invited" }, { "Engineer":"Baltanos", "EngineerID":400010, "Progress":"Known" }, { "Engineer":"Petra Olmanova", "EngineerID":300130, "Progress":"Invited" }, { "Engineer":"The Dweller", "EngineerID":300180, "Progress":"Unlocked", "RankProgress":0, "Rank":5 }, { "Engineer":"Elvira Martuuk", "EngineerID":300160, "Progress":"Unlocked", "RankProgress":89, "Rank":4 }, { "Engineer":"Lei Cheung", "EngineerID":300120, "Progress":"Unlocked", "RankProgress":0, "Rank":3 }, { "Engineer":"Didi Vatermann", "EngineerID":300000, "Progress":"Invited" }, { "Engineer":"Tod 'The Blaster' McQuinn", "EngineerID":300260, "Progress":"Unlocked", "RankProgress":0, "Rank":5 }, { "Engineer":"Domino Green", "EngineerID":400002, "Progress":"Invited" }, { "Engineer":"Marsha Hicks", "EngineerID":300150, "Progress":"Invited" } ] }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_EngineerProgress((EngineerProgress)GetEvent());

@@ -34,18 +34,11 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (AfmuRepairs)O;
 
                 Variables.Record(Name + "_Name", Event.Module_Localised);
                 Variables.Record(Name + "_Health", Event.Health);
                 Variables.Record(Name + "_Item", Event.Module);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
     }
 }

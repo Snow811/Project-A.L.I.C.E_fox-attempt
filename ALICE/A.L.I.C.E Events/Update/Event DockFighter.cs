@@ -24,25 +24,16 @@ namespace ALICE_Events
         //Plugin Logic Process
         public override void Process(object O)
         {
-            try
-            {
                 var Event = (DockFighter)O;
 
                 //Fighter Docked Audio
                 IStatus.Fighter.Response.Docked(
                     ICheck.Initialized(ClassName));    //Check Plugin Initialized
-            }
-            catch (Exception ex)
-            {
-                ExceptionProcess(Name, ex);
-            }
         }
 
         //Plugin Property Aligment
         public override void Alignment(object O)
         {
-            try
-            {
                 IStatus.Fighter.Deployed = false;
                 IStatus.Supercruise = false;
                 IStatus.Hyperspace = false;
@@ -50,11 +41,6 @@ namespace ALICE_Events
                 IStatus.Touchdown = false;
                 IStatus.Docking.Docked = false;
                 IStatus.Docking.State = IEnums.DockingState.Undocked;
-            }
-            catch (Exception ex)
-            {
-                ExceptionAlignment(Name, ex);
-            }
         }
     }
 }

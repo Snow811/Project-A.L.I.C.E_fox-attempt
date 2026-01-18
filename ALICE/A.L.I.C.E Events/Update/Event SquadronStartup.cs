@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2025-11-12T09:17:29Z", "event":"SquadronStartup", "SquadronID":84124, "SquadronName":"FOXBOX", "CurrentRank":0, "CurrentRankName":"$Squadron_DefaultRankName_Rank0;", "CurrentRankName_Localised":"Leader" }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_SquadronStartup((SquadronStartup)GetEvent());

@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-10T18:41:01Z", "event":"ScanBaryCentre", "StarSystem":"Palee", "SystemAddress":4923919960435, "BodyID":2, "SemiMajorAxis":6548910140991.210938, "Eccentricity":0.154441, "OrbitalInclination":150.229020, "Periapsis":343.819493, "OrbitalPeriod":14917109012.603760, "AscendingNode":-120.867775, "MeanAnomaly":329.079442 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_ScanBaryCentre((ScanBaryCentre)GetEvent());

@@ -53,8 +53,6 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (CodexEntry)O;
 
                 Variables.Record(Name + "_ID", Event.EntryID);
@@ -70,18 +68,11 @@ namespace ALICE_Events
                 Variables.Record(Name + "_EDRegion", Event.Region);
                 Variables.Record(Name + "_EDSubCategory", Event.SubCategory);
                 Variables.Record(Name + "_EDCategory", Event.Category);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
 
         //Plugin Logic Process
         public override void Process(object O)
         {
-            try
-            {
                 var Event = (CodexEntry)O;
 
                 //Process Codex Data
@@ -90,11 +81,6 @@ namespace ALICE_Events
 
                 //Update Current System Information
                 IObjects.SystemCurrent.Update_CodexEntries(Event);
-            }
-            catch (Exception ex)
-            {
-                ExceptionProcess(Name, ex);
-            }
         }
     }
 }

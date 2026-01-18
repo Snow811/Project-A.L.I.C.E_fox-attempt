@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-10T14:34:02Z", "event":"SendText", "To":"starsystem", "Message":"hope is to get him sorted for the ptn booze cruise so he can go print credits to remove that hastle from the game and let him just have fun", "Sent":true }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_SendText((SendText)GetEvent());

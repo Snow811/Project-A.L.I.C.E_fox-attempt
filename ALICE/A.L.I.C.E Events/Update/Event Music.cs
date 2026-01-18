@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2025-11-12T09:35:22Z", "event":"Music", "MusicTrack":"DestinationFromSupercruise" }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,17 +17,9 @@ namespace ALICE_Events
         {
             if (IEvents.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
-                catch (Exception ex)
-                {
-                    Logger.Exception(Name, "An Exception Occured While Updating Variables");
-                    Logger.Exception(Name, "Exception: " + ex);
-                }
             }
 
             //GameState.Logic_Music((Music)GetEvent());

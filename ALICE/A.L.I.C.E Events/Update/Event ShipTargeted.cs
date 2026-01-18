@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-17T18:33:38Z", "event":"ShipTargeted", "TargetLocked":true, "Ship":"federation_dropship_mkii", "Ship_Localised":"Federal Assault Ship", "ScanStage":3, "PilotName":"$npc_name_decorate:#name=Douglas Alexander Frank Torrance;", "PilotName_Localised":"Douglas Alexander Frank Torrance", "PilotRank":"Dangerous", "ShieldHealth":100.000000, "HullHealth":100.000000, "Faction":"Kigah Drug Empire", "LegalStatus":"Wanted", "Bounty":416079 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_ShipTargeted((ShipTargeted)GetEvent());

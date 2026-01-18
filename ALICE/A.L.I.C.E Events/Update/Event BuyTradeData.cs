@@ -30,17 +30,10 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (BuyTradeData)O;
 
                 Variables.Record(Name + "_System", Event.System);
                 Variables.Record(Name + "_Cost", Event.Cost);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
     }
 }

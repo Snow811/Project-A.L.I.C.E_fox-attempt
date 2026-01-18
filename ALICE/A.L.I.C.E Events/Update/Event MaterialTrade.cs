@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-17T18:50:21Z", "event":"MaterialTrade", "MarketID":3230440960, "TraderType":"manufactured", "Paid":{ "Material":"exquisitefocuscrystals", "Material_Localised":"Exquisite Focus Crystals", "Category":"Manufactured", "Quantity":20 }, "Received":{ "Material":"wornshieldemitters", "Material_Localised":"Worn Shield Emitters", "Category":"Manufactured", "Quantity":270 } }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_MaterialTrade((MaterialTrade)GetEvent());

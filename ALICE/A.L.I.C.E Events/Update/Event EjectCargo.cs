@@ -35,32 +35,18 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (EjectCargo)O;
 
                 Variables.Record(Name + "_Name", Event.Type_Localised);
                 Variables.Record(Name + "_EDName", Event.Type);
                 Variables.Record(Name + "_Count", Event.Count);
                 Variables.Record(Name + "_Abandoned", Event.Abandoned);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
 
         //Plugin Property Aligment
         public override void Alignment(object O)
         {
-            try
-            {
                 IStatus.Hyperspace = false;
-            }
-            catch (Exception ex)
-            {
-                ExceptionAlignment(Name, ex);
-            }
         }
     }
 }

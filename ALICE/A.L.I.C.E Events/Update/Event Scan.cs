@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-15T17:43:11Z", "event":"Scan", "ScanType":"AutoScan", "BodyName":"Rho Ophiuchi Sector IH-U b3-1 3", "BodyID":10, "Parents":[ {"Star":0} ], "StarSystem":"Rho Ophiuchi Sector IH-U b3-1", "SystemAddress":2870783649369, "DistanceFromArrivalLS":44.798474, "TidalLock":true, "TerraformState":"", "PlanetClass":"Rocky ice body", "Atmosphere":"thin sulfur dioxide atmosphere", "AtmosphereType":"SulphurDioxide", "AtmosphereComposition":[ { "Name":"SulphurDioxide", "Percent":100.000000 } ], "Volcanism":"", "MassEM":0.054300, "Radius":2582516.250000, "SurfaceGravity":3.245091, "SurfaceTemperature":235.013306, "SurfacePressure":780.382568, "Landable":true, "Materials":[ { "Name":"iron", "Percent":20.317785 }, { "Name":"sulphur", "Percent":17.379732 }, { "Name":"nickel", "Percent":15.367519 }, { "Name":"carbon", "Percent":14.614555 }, { "Name":"phosphorus", "Percent":9.356489 }, { "Name":"manganese", "Percent":8.391038 }, { "Name":"zinc", "Percent":5.521613 }, { "Name":"vanadium", "Percent":4.989341 }, { "Name":"cadmium", "Percent":1.577768 }, { "Name":"niobium", "Percent":1.388612 }, { "Name":"tellurium", "Percent":1.095539 } ], "Composition":{ "Ice":0.133330, "Rock":0.580238, "Metal":0.286433 }, "SemiMajorAxis":13430225849.151611, "Eccentricity":0.000059, "OrbitalInclination":-0.002515, "Periapsis":156.328851, "OrbitalPeriod":1587988.495827, "AscendingNode":17.401584, "MeanAnomaly":91.351154, "RotationPeriod":1589506.516045, "AxialTilt":-0.427538, "WasDiscovered":true, "WasMapped":true, "WasFootfalled":true }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_Scan((Scan)GetEvent());

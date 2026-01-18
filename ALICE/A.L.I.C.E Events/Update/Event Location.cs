@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-16T17:04:17Z", "event":"Location", "DistFromStarLS":66.652847, "Docked":true, "StationName":"Surveyor’s Reach", "StationType":"SurfaceStation", "MarketID":129032283, "StationFaction":{ "Name":"Deep Space Surveys", "FactionState":"War" }, "StationGovernment":"$government_Democracy;", "StationGovernment_Localised":"Democracy", "StationServices":[ "dock", "autodock", "blackmarket", "commodities", "contacts", "exploration", "missions", "outfitting", "crewlounge", "rearm", "refuel", "repair", "engineer", "flightcontroller", "stationoperations", "searchrescue", "stationMenu", "livery" ], "StationEconomy":"$economy_Service;", "StationEconomy_Localised":"Service", "StationEconomies":[ { "Name":"$economy_Service;", "Name_Localised":"Service", "Proportion":1.000000 } ], "Taxi":false, "Multicrew":false, "StarSystem":"Alrai", "SystemAddress":3657198211794, "StarPos":[-38.71875,12.31250,-21.62500], "SystemAllegiance":"Federation", "SystemEconomy":"$economy_HighTech;", "SystemEconomy_Localised":"High Tech", "SystemSecondEconomy":"$economy_Service;", "SystemSecondEconomy_Localised":"Service", "SystemGovernment":"$government_Democracy;", "SystemGovernment_Localised":"Democracy", "SystemSecurity":"$SYSTEM_SECURITY_high;", "SystemSecurity_Localised":"High Security", "Population":12801179, "Body":"Alrai 1", "BodyID":1, "BodyType":"Planet", "ControllingPower":"Jerome Archer", "Powers":[ "Li Yong-Rui", "Jerome Archer" ], "PowerplayState":"Stronghold", "PowerplayStateControlProgress":2.351590, "PowerplayStateReinforcement":1521818, "PowerplayStateUndermining":170228, "Factions":[ { "Name":"Alrai Advanced Corp.", "FactionState":"None", "Government":"Corporate", "Influence":0.121635, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000 }, { "Name":"Deep Space Surveys", "FactionState":"War", "Government":"Democracy", "Influence":0.086740, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":60.000000, "ActiveStates":[ { "State":"War" } ] }, { "Name":"Justice Party of Alrai", "FactionState":"CivilWar", "Government":"Dictatorship", "Influence":0.132602, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "ActiveStates":[ { "State":"CivilWar" } ] }, { "Name":"Alrai Crew", "FactionState":"None", "Government":"Anarchy", "Influence":0.049850, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000 }, { "Name":"Union of Alrai Liberals", "FactionState":"CivilWar", "Government":"Democracy", "Influence":0.132602, "Allegiance":"Federation", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "ActiveStates":[ { "State":"CivilWar" } ] }, { "Name":"Alrai Company", "FactionState":"War", "Government":"Corporate", "Influence":0.086740, "Allegiance":"Federation", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "ActiveStates":[ { "State":"War" } ] }, { "Name":"Blood Brothers from Alrai", "FactionState":"Boom", "Government":"Democracy", "Influence":0.389830, "Allegiance":"Federation", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":59.018501, "RecoveringStates":[ { "State":"Terrorism", "Trend":0 }, { "State":"Expansion", "Trend":0 } ], "ActiveStates":[ { "State":"Boom" } ] } ], "SystemFaction":{ "Name":"Blood Brothers from Alrai", "FactionState":"Boom" }, "Conflicts":[ { "WarType":"war", "Status":"active", "Faction1":{ "Name":"Deep Space Surveys", "Stake":"", "WonDays":3 }, "Faction2":{ "Name":"Alrai Company", "Stake":"Ecumenical Echo Communications", "WonDays":3 } }, { "WarType":"civilwar", "Status":"active", "Faction1":{ "Name":"Justice Party of Alrai", "Stake":"", "WonDays":0 }, "Faction2":{ "Name":"Union of Alrai Liberals", "Stake":"Hidden Oak Hacienda", "WonDays":2 } } ] }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_Location((Location)GetEvent());

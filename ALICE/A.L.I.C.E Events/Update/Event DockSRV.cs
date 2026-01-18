@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-11T00:45:37Z", "event":"DockSRV", "SRVType":"combat_multicrew_srv_01", "SRVType_Localised":"SRV Scorpion", "ID":34 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_DockSRV((DockSRV)GetEvent());

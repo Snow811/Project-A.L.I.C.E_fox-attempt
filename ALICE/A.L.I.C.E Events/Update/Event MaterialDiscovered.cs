@@ -35,31 +35,17 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (MaterialDiscovered)O;
 
                 Variables.Record(Name + "_Catagory", Event.Category);
                 Variables.Switch(Name + "_Name", Event.Name_Localised, Event.Name);
                 Variables.Record(Name + "_DiscoveryNumber", Event.DiscoveryNumber);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
 
         //Plugin Property Aligment
         public override void Alignment(object O)
         {
-            try
-            {
                 IStatus.Hyperspace = false;
-            }
-            catch (Exception ex)
-            {
-                ExceptionAlignment(Name, ex);
-            }
         }
     }
 }

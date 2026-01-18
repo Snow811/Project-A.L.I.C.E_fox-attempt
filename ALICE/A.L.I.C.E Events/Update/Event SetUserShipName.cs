@@ -36,35 +36,21 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (SetUserShipName)O;
 
                 Variables.Record(Name + "_Ship", Event.Ship);
                 Variables.Record(Name + "_ID", Event.ShipID);
                 Variables.Record(Name + "_ShipName", Event.ShipID);
                 Variables.Record(Name + "_CallSign", Event.UserShipId);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
 
         //Plugin Logic Process
         public override void Process(object O)
         {
-            try
-            {
                 var Event = (SetUserShipName)O;
 
                 //Update Mothership Data
                 IStatus.Mothership.Update(Event);
-            }
-            catch (Exception ex)
-            {
-                ExceptionProcess(Name, ex);
-            }
         }
     }
 }

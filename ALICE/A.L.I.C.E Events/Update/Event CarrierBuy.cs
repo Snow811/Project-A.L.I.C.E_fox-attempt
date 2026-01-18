@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-07T15:31:47Z", "event":"CarrierBuy", "CarrierType":"SquadronCarrier", "CarrierID":3714546688, "BoughtAtMarket":128037376, "Location":"Marrallang", "SystemAddress":5031788942042, "Price":25000000000, "Variant":"CarrierDockB_Squadron", "Callsign":"QZQ-08V" }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_CarrierBuy((CarrierBuy)GetEvent());
