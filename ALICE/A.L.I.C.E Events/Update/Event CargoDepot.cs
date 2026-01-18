@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2025-11-12T10:45:29Z", "event":"CargoDepot", "MissionID":1035688088, "UpdateType":"Deliver", "CargoType":"Bertrandite", "Count":726, "StartMarketID":0, "EndMarketID":3222819072, "ItemsCollected":0, "ItemsDelivered":726, "TotalItemsToDeliver":726, "Progress":0.000000 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_CargoDepot((CargoDepot)GetEvent());

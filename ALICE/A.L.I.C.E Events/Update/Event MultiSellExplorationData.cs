@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-15T20:44:19Z", "event":"MultiSellExplorationData", "Discovered":[ { "SystemName":"HIP 58832", "NumBodies":3 }, { "SystemName":"HIP 57784", "NumBodies":6 }, { "SystemName":"HD 104495", "NumBodies":5 }, { "SystemName":"62 Gamma Ophiuchi", "NumBodies":1 }, { "SystemName":"Luyten 145-141", "NumBodies":1 }, { "SystemName":"LP 528-71", "NumBodies":1 }, { "SystemName":"BD+10 3250", "NumBodies":4 }, { "SystemName":"Rho Ophiuchi Sector IH-U b3-1", "NumBodies":9 }, { "SystemName":"Panchua", "NumBodies":1 }, { "SystemName":"Nerishis", "NumBodies":1 }, { "SystemName":"Puppis Sector EL-Y c20", "NumBodies":2 }, { "SystemName":"Ladabalbasa", "NumBodies":6 }, { "SystemName":"Alrai Sector KC-V c2-23", "NumBodies":1 }, { "SystemName":"LHS 2010", "NumBodies":2 }, { "SystemName":"Ngobed", "NumBodies":4 }, { "SystemName":"Core Sys Sector QT-R b4-5", "NumBodies":2 }, { "SystemName":"Puppis Sector JR-W b1-5", "NumBodies":1 }, { "SystemName":"LFT 507", "NumBodies":2 }, { "SystemName":"Col 285 Sector NG-H a26-1", "NumBodies":1 }, { "SystemName":"Col 285 Sector PM-F a27-2", "NumBodies":13 } ], "BaseValue":277908, "Bonus":0, "TotalEarnings":261252 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_MultiSellExplorationData((MultiSellExplorationData)GetEvent());

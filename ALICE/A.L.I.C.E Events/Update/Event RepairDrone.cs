@@ -32,18 +32,11 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (RepairDrone)O;
 
                 Variables.Switch(Name + "_Hull", Event.HullRepaired, 0);
                 Variables.Switch(Name + "_Hull", Event.CockpitRepaired, 0);
                 Variables.Switch(Name + "_Hull", Event.CorrosionRepaired, 0);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
     }
 }

@@ -34,19 +34,12 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (SellDrones)O;
 
                 Variables.Record(Name + "_Type", Event.Type);
                 Variables.Record(Name + "_Count", Event.Count);
                 Variables.Record(Name + "_SellPrice", Event.SellPrice);
                 Variables.Record(Name + "_Cost", Event.TotalSale);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
     }
 }

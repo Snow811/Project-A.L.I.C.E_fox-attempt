@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-10T21:37:22Z", "event":"Backpack", "Items":[  ], "Components":[  ], "Consumables":[ { "Name":"healthpack", "Name_Localised":"Medkit", "OwnerID":0, "Count":2 }, { "Name":"energycell", "Name_Localised":"Energy Cell", "OwnerID":0, "Count":2 }, { "Name":"amm_grenade_emp", "Name_Localised":"Shield Disruptor", "OwnerID":0, "Count":1 }, { "Name":"amm_grenade_frag", "Name_Localised":"Frag Grenade", "OwnerID":0, "Count":3 }, { "Name":"amm_grenade_shield", "Name_Localised":"Shield Projector", "OwnerID":0, "Count":1 }, { "Name":"bypass", "Name_Localised":"E-Breach", "OwnerID":0, "Count":1 } ], "Data":[  ] }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_Backpack((Backpack)GetEvent());

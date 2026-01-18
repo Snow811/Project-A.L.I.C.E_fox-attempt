@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2025-11-12T10:57:05Z", "event":"ApproachSettlement", "Name":"McDevitt Settlement", "MarketID":3507690240, "StationFaction":{ "Name":"HIP 9774 Anarchists", "FactionState":"CivilWar" }, "StationGovernment":"$government_Anarchy;", "StationGovernment_Localised":"Anarchy", "StationAllegiance":"Empire", "StationServices":[ "dock", "autodock", "blackmarket", "commodities", "contacts", "exploration", "missions", "outfitting", "crewlounge", "rearm", "refuel", "repair", "shipyard", "tuning", "engineer", "missionsgenerated", "facilitator", "flightcontroller", "stationoperations", "powerplay", "stationMenu", "shop", "livery", "socialspace", "bartender", "vistagenomics", "pioneersupplies", "apexinterstellar", "frontlinesolutions", "registeringcolonisation" ], "StationEconomy":"$economy_Colony;", "StationEconomy_Localised":"Colony", "StationEconomies":[ { "Name":"$economy_Colony;", "Name_Localised":"Colony", "Proportion":1.000000 } ], "SystemAddress":1659761559907, "BodyID":25, "BodyName":"HIP 9774 A 3 a", "Latitude":-51.718937, "Longitude":-47.780975 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_ApproachSettlement((ApproachSettlement)GetEvent());

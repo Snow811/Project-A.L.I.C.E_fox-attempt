@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-17T19:45:37Z", "event":"MissionCompleted", "Faction":"Loan Sharks Mercenary Corps", "Name":"Mission_Massacre_RankFed_name", "LocalisedName":"Federal Navy Strike Contract", "MissionID":1042347155, "TargetType":"$MissionUtil_FactionTag_Pirate;", "TargetType_Localised":"Pirates", "TargetFaction":"GD 215 Blue Pirates", "KillCount":5, "DestinationSystem":"GD 215", "DestinationStation":"Faraday Orbital", "Reward":449602, "MaterialsReward":[ { "Name":"FocusCrystals", "Name_Localised":"Focus Crystals", "Category":"$MICRORESOURCE_CATEGORY_Manufactured;", "Category_Localised":"Manufactured", "Count":18 } ], "FactionEffects":[ { "Faction":"Loan Sharks Mercenary Corps", "Effects":[ { "Effect":"$MISSIONUTIL_Interaction_Summary_EP_up;", "Effect_Localised":"The economic status of $#MinorFaction; has improved in the $#System; system.", "Trend":"UpGood" } ], "Influence":[ { "SystemAddress":2278220106099, "Trend":"UpGood", "Influence":"++" } ], "ReputationTrend":"UpGood", "Reputation":"++" }, { "Faction":"GD 215 Blue Pirates", "Effects":[ { "Effect":"$MISSIONUTIL_Interaction_Summary_EP_down;", "Effect_Localised":"The economic status of $#MinorFaction; has declined in the $#System; system.", "Trend":"DownBad" } ], "Influence":[ { "SystemAddress":5361730210696, "Trend":"DownBad", "Influence":"+" } ], "ReputationTrend":"DownBad", "Reputation":"+" } ] }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_MissionCompleted((MissionCompleted)GetEvent());

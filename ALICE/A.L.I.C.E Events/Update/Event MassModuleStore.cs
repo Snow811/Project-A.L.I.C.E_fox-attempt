@@ -5,7 +5,6 @@
 using ALICE_Debug;
 using ALICE_Status;
 using System;
-using System.Collections.Generic;
 
 namespace ALICE_Events
 {
@@ -53,25 +52,16 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (MassModuleStore)O;
 
                 Variables.Record(Name + "_Market", Event.MarketID);
                 Variables.Record(Name + "_Ship", Event.Ship);
                 Variables.Record(Name + "_ShipID", Event.ShipID);                
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
 
         //Plugin Property Aligment
         public override void Alignment(object O)
         {
-            try
-            {
                 IStatus.Docking.Docked = true;
                 ISet.Status.LandingGear(ClassName, true);
                 IStatus.Planet.OrbitalMode = false;
@@ -82,11 +72,6 @@ namespace ALICE_Events
                 IStatus.CargoScoop = false;
                 IStatus.Fighter.Deployed = false;
                 IStatus.Hardpoints = false;
-            }
-            catch (Exception ex)
-            {
-                ExceptionAlignment(Name, ex);
-            }
         }
     }
 }

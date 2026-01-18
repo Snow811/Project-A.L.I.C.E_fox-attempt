@@ -37,16 +37,9 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (DataScanned)O;
 
                 Variables.Record(Name + "_Source", Event.Type);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
     }
 }

@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-17T20:03:00Z", "event":"EngineerCraft", "Slot":"FrameShiftDrive", "Module":"int_hyperdrive_overcharge_size6_class5", "Ingredients":[ { "Name":"phosphorus", "Count":1 }, { "Name":"chemicalprocessors", "Name_Localised":"Chemical Processors", "Count":1 }, { "Name":"wakesolutions", "Name_Localised":"Strange Wake Solutions", "Count":1 } ], "Engineer":"Felicity Farseer", "EngineerID":300100, "BlueprintID":128673692, "BlueprintName":"FSD_LongRange", "Level":3, "Quality":0.333000, "Modifiers":[ { "Label":"Mass", "Value":48.000000, "OriginalValue":40.000000, "LessIsGood":1 }, { "Label":"Integrity", "Value":128.309998, "OriginalValue":141.000000, "LessIsGood":0 }, { "Label":"PowerDraw", "Value":0.817500, "OriginalValue":0.750000, "LessIsGood":1 }, { "Label":"FSDOptimalMass", "Value":2566.600098, "OriginalValue":2000.000000, "LessIsGood":0 } ] }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_EngineerCraft((EngineerCraft)GetEvent());

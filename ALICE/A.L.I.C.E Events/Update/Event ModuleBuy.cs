@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-10T15:06:41Z", "event":"ModuleBuy", "Slot":"PowerDistributor", "SellItem":"$int_powerdistributor_size4_class1_name;", "SellItem_Localised":"Power Distributor", "SellPrice":9958, "BuyItem":"$int_powerdistributor_size4_class5_name;", "BuyItem_Localised":"Power Distributor", "MarketID":128666762, "BuyPrice":389022, "Ship":"type8", "ShipID":40 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_ModuleBuy((ModuleBuy)GetEvent());

@@ -3,7 +3,6 @@
 //Source Journal Line: { "timestamp":"2018-10-11T20:21:58Z", "event":"TechnologyBroker", "BrokerType":"guardian", "MarketID":3223415296, "ItemsUnlocked":[ { "Name":"Int_GuardianFSDBooster_Size1", "Name_Localised":"Guardian FSD Booster" }, { "Name":"Int_GuardianFSDBooster_Size2", "Name_Localised":"$Int_GuardianFSDBooster_Size1_Name;" }, { "Name":"Int_GuardianFSDBooster_Size3", "Name_Localised":"$Int_GuardianFSDBooster_Size1_Name;" }, { "Name":"Int_GuardianFSDBooster_Size4", "Name_Localised":"$Int_GuardianFSDBooster_Size1_Name;" }, { "Name":"Int_GuardianFSDBooster_Size5", "Name_Localised":"$Int_GuardianFSDBooster_Size1_Name;" } ], "Commodities":[ { "Name":"hnshockmount", "Name_Localised":"HN Shock Mount", "Count":8 } ], "Materials":[ { "Name":"guardian_moduleblueprint", "Name_Localised":"Guardian Module Blueprint Segment", "Count":1, "Category":"Encoded" }, { "Name":"guardian_powercell", "Name_Localised":"Guardian Power Cell", "Count":21, "Category":"Manufactured" }, { "Name":"guardian_techcomponent", "Name_Localised":"Guardian Technology Component", "Count":21, "Category":"Manufactured" }, { "Name":"focuscrystals", "Name_Localised":"Focus Crystals", "Count":24, "Category":"Manufactured" } ] }
 
 using System;
-using System.Collections.Generic;
 
 namespace ALICE_Events
 {
@@ -79,17 +78,10 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (TechnologyBroker)O;
 
                 Variables.Record(Name + "_Market", Event.MarketID);
                 Variables.Record(Name + "_Type", Event.BrokerType);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
     }
 }

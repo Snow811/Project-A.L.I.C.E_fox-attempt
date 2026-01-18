@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-15T17:46:59Z", "event":"Docked", "StationName":"Hawker Point", "StationType":"Coriolis", "Taxi":false, "Multicrew":false, "StarSystem":"Rho Ophiuchi Sector IH-U b3-1", "SystemAddress":2870783649369, "MarketID":4298026243, "StationFaction":{ "Name":"Black Flag Gang" }, "StationGovernment":"$government_Anarchy;", "StationGovernment_Localised":"Anarchy", "StationServices":[ "dock", "autodock", "blackmarket", "commodities", "contacts", "exploration", "missions", "outfitting", "crewlounge", "rearm", "refuel", "repair", "shipyard", "engineer", "missionsgenerated", "facilitator", "flightcontroller", "stationoperations", "powerplay", "stationMenu", "shop", "livery", "socialspace", "vistagenomics", "registeringcolonisation" ], "StationEconomy":"$economy_Refinery;", "StationEconomy_Localised":"Refinery", "StationEconomies":[ { "Name":"$economy_Refinery;", "Name_Localised":"Refinery", "Proportion":3.800000 }, { "Name":"$economy_Industrial;", "Name_Localised":"Industrial", "Proportion":3.400000 }, { "Name":"$economy_Terraforming;", "Name_Localised":"Terraforming", "Proportion":1.000000 }, { "Name":"$economy_Agri;", "Name_Localised":"Agriculture", "Proportion":0.600000 }, { "Name":"$economy_HighTech;", "Name_Localised":"High Tech", "Proportion":0.150000 }, { "Name":"$economy_Extraction;", "Name_Localised":"Extraction", "Proportion":0.150000 }, { "Name":"$economy_Military;", "Name_Localised":"Military", "Proportion":0.050000 }, { "Name":"$economy_Tourism;", "Name_Localised":"Tourism", "Proportion":0.050000 }, { "Name":"$economy_Service;", "Name_Localised":"Service", "Proportion":0.050000 } ], "DistFromStarLS":44.804046, "LandingPads":{ "Small":6, "Medium":14, "Large":6 } }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_Docked((Docked)GetEvent());

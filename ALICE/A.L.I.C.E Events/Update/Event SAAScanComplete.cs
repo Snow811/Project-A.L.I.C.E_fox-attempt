@@ -35,26 +35,17 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (SAAScanComplete)O;
 
                 Variables.Record(Name + "_Name", Event.BodyName);
                 Variables.Record(Name + "_ID", Event.BodyID);
                 Variables.Record(Name + "_Probes", Event.ProbesUsed);
                 Variables.Record(Name + "_EfficiencyTarget", Event.EfficiencyTarget);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
 
         //Plugin Logic Process
         public override void Process(object O)
         {
-            try
-            {
                 var Event = (SAAScanComplete)O;
 
                 //Update Current System Objects
@@ -62,11 +53,6 @@ namespace ALICE_Events
 
                 //Extended Logger
                 IObjects.SystemCurrent.Log_SystemBodies();
-            }
-            catch (Exception ex)
-            {
-                ExceptionProcess(Name, ex);
-            }
         }
     }
 }

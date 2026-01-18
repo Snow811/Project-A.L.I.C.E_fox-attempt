@@ -32,18 +32,11 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
-            try
-            {
                 var Event = (DatalinkVoucher)O;
 
                 Variables.Record(Name + "_Reward", Event.Reward);
                 Variables.Record(Name + "_Victim", Event.VictimFaction);
                 Variables.Record(Name + "_Payee", Event.PayeeFaction);
-            }
-            catch (Exception ex)
-            {
-                ExceptionGenerate(Name, ex);
-            }
         }
     }
 }

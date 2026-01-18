@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-10T10:58:42Z", "event":"Liftoff", "PlayerControlled":true, "Taxi":false, "Multicrew":false, "StarSystem":"Gali", "SystemAddress":6680855220970, "Body":"Gali B 1", "BodyID":22, "OnStation":false, "OnPlanet":true, "Latitude":-28.222754, "Longitude":22.812063, "NearestDestination":"Bassett Hydroponics Base" }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_Liftoff((Liftoff)GetEvent());

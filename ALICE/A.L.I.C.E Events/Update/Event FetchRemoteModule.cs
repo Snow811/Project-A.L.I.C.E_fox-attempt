@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-07T16:55:36Z", "event":"FetchRemoteModule", "StorageSlot":119, "StoredItem":"$int_powerdistributor_size6_class1_name;", "StoredItem_Localised":"Power Distributor", "ServerId":128064203, "TransferCost":848, "TransferTime":1864, "Ship":"krait_mkii", "ShipID":7 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_FetchRemoteModule((FetchRemoteModule)GetEvent());

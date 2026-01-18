@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-17T19:28:47Z", "event":"FSSSignalDiscovered", "SystemAddress":5361730210696, "SignalName":"$USS_HighGradeEmissions;", "SignalName_Localised":"Unidentified signal source", "SignalType":"USS", "USSType":"$USS_Type_ValuableSalvage;", "USSType_Localised":"Encoded emissions", "SpawningState":"$FactionState_Expansion_desc;", "SpawningState_Localised":"Expansion represents a factions intention to spread into a nearby system in the near future.", "SpawningFaction":"German Pilot Lounge", "ThreatLevel":0, "TimeRemaining":1908.215576 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_FSSSignalDiscovered((FSSSignalDiscovered)GetEvent());
