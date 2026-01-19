@@ -36,12 +36,19 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (PayBounties)O;
 
                 Variables.Record(Name + "_Credits", Event.Amount);
                 Variables.Record(Name + "_Faction", Event.Faction_Localised);
                 Variables.Record(Name + "_ShipID", Event.ShipID);
                 Variables.Record(Name + "_BrokerPrecentage", Event.BrokerPercentage);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

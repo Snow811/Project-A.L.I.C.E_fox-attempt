@@ -29,12 +29,19 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (RebootRepair)O;
 
                 int C = 0; foreach (var Module in Event.Modules)
                 {
                     Variables.Record(Name + "_Module" + C, Module);
                 }
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

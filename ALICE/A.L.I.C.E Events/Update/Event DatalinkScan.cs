@@ -30,10 +30,17 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (DatalinkScan)O;
 
                 Variables.Record(Name + "_Message", Event.Message_Localised);
                 Variables.Record(Name + "_EDMessage", Event.Message);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

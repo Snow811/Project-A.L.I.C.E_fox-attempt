@@ -28,9 +28,16 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (ClearSaveGame)O;
 
                 Variables.Record(Name + "_Name", Event.Name);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

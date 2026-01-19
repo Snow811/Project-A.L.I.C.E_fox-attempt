@@ -44,6 +44,8 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (ModuleSwap)O;
 
                 Variables.Record(Name + "_MarketID", Event.MarketID);
@@ -53,6 +55,11 @@ namespace ALICE_Events
                 Variables.Record(Name + "_ToItem", Event.ToItem);
                 Variables.Record(Name + "_Ship", Event.Ship);
                 Variables.Record(Name + "_ShipID", Event.ShipID);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

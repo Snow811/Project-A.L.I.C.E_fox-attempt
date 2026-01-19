@@ -28,9 +28,16 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (VehicleSwitch)O;
 
                 Variables.Record(Name + "_To", Event.To);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

@@ -28,9 +28,16 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (ChangeCrewRole)O;
 
                 Variables.Record(Name + "_Role", Event.Role);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

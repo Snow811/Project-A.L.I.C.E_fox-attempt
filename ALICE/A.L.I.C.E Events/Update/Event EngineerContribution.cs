@@ -41,6 +41,8 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (EngineerContribution)O;
 
                 Variables.Record(Name + "_Engineer", Event.Engineer);
@@ -50,17 +52,29 @@ namespace ALICE_Events
                 Variables.Record(Name + "_EDCommodity", Event.Commodity);
                 Variables.Record(Name + "_Count", Event.Quantity);
                 Variables.Record(Name + "_Total", Event.TotalQuantity);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
 
         //Plugin Property Aligment
         public override void Alignment(object O)
         {
+            try
+            {
                 IStatus.Supercruise = false;
                 IStatus.Hyperspace = false;
                 IStatus.Touchdown = false;
                 IStatus.Docking.Docked = true;
                 IStatus.Hardpoints = false;                
                 IStatus.Fighter.Deployed = false;
+            }
+            catch (Exception ex)
+            {
+                ExceptionAlignment(Name, ex);
+            }
         }
     }
 }

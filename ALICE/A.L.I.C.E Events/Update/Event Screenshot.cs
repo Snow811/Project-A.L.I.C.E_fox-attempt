@@ -41,6 +41,8 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (Screenshot)O;
 
                 Variables.Record(Name + "_Filename", Event.Filename);
@@ -48,6 +50,11 @@ namespace ALICE_Events
                 Variables.Record(Name + "_Height", Event.Height);
                 Variables.Record(Name + "_System", Event.System);
                 Variables.Record(Name + "_Body", Event.Body);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

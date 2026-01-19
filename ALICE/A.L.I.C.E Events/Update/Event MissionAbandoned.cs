@@ -30,10 +30,17 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (MissionAbandoned)O;
 
                 Variables.Record(Name + "_Name", Event.Name);
                 Variables.Record(Name + "_ID", Event.MissionID);                
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

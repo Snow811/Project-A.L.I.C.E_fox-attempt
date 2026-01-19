@@ -37,11 +37,18 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (SellExplorationData)O;
 
                 Variables.Record(Name + "_BaseCredits", Event.BaseValue);
                 Variables.Record(Name + "_BonusCredits", Event.Bonus);
                 Variables.Record(Name + "_TotalCredits", Event.TotalEarnings);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

@@ -29,18 +29,32 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (LaunchDrone)O;
 
                 Variables.Record(Name + "_Type", Event.Type);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
 
         //Plugin Property Aligment
         public override void Alignment(object O)
         {
+            try
+            {
                 IStatus.Supercruise = false;
                 IStatus.Hyperspace = false;
                 IStatus.Touchdown = false;
                 IStatus.Docking.Docked = false;
+            }
+            catch (Exception ex)
+            {
+                ExceptionAlignment(Name, ex);
+            }
         }
     }
 }

@@ -30,10 +30,17 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (PowerplayDefect)O;
 
                 Variables.Record(Name + "_From", Event.FromPower);
                 Variables.Record(Name + "_To", Event.ToPower);
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
     }
 }

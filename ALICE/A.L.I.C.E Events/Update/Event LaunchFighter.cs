@@ -32,29 +32,50 @@ namespace ALICE_Events
         //Variable Generation
         public override void Generate(object O)
         {
+            try
+            {
                 var Event = (LaunchFighter)O;
 
                 Variables.Record(Name + "_Loadout", Event.Loadout);
                 Variables.Switch(Name + "_Pilot", Event.PlayerControlled, "Commander", "NPC");
+            }
+            catch (Exception ex)
+            {
+                ExceptionGenerate(Name, ex);
+            }
         }
 
         //Plugin Logic Process
         public override void Process(object O)
         {
+            try
+            {
                 var Event = (LaunchFighter)O;
 
                 //Update Status Object
                 IStatus.Fighter.Update(Event);
+            }
+            catch (Exception ex)
+            {
+                ExceptionProcess(Name, ex);
+            }
         }
 
         //Plugin Property Aligment
         public override void Alignment(object O)
         {
+            try
+            {
                 IStatus.Supercruise = false;
                 IStatus.Hyperspace = false;
                 IStatus.Touchdown = false;
                 IStatus.Docking.Docked = false;                
                 ISet.Status.LandingGear(ClassName, false);
+            }
+            catch (Exception ex)
+            {
+                ExceptionAlignment(Name, ex);
+            }        
         }
     }
 }
