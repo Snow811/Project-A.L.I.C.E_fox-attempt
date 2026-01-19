@@ -15,16 +15,34 @@ namespace ALICE_Events
     {
         public decimal MarketID { get; set; }
         public string TraderType { get; set; }
-        public string Paid { get; set; }
-        public string Received { get; set; }
+        public TradeMat Paid { get; set; }
+        public TradeMat Received { get; set; }
 
         //Default Constructor
         public MaterialTrade()
         {
             MarketID = Dec();
             TraderType = Str();
-            Paid = Str();
-            Received = Str();
+            Paid = new TradeMat();
+            Received = new TradeMat();
+        }
+
+        public class TradeMat : Catch
+        {
+            public string Material { get; set; }
+            public string Material_Localised { get; set; }
+            public string Category { get; set; }
+            public string Category_Localised { get; set; }
+            public decimal Quantity { get; set; }
+
+            public TradeMat()
+            {
+                Material = Str();
+                Material_Localised = Str();
+                Category = Str();
+                Category_Localised = Str();
+                Quantity = Dec();
+            }
         }
     }
 

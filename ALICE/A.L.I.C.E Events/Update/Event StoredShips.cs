@@ -15,8 +15,8 @@ namespace ALICE_Events
         public string StationName { get; set; }
         public decimal MarketID { get; set; }
         public string StarSystem { get; set; }
-        public string ShipsHere { get; set; }
-        public string ShipsRemote { get; set; }
+        public List<Ship> ShipsHere { get; set; }
+        public List<Ship> ShipsRemote { get; set; }
 
         //Default Constructor
         public StoredShips()
@@ -24,8 +24,72 @@ namespace ALICE_Events
             StationName = Str();
             MarketID = Dec();
             StarSystem = Str();
-            ShipsHere = Str();
-            ShipsRemote = Str();
+            ShipsHere = new List<Ship>();
+            ShipsRemote = new List<Ship>();
+        }
+
+        public class Ship : Catch
+        {
+            public decimal ShipID { get; set; }
+            public string ShipType { get; set; }
+            public string ShipType_Localised { get; set; }
+            public string Name { get; set; }
+            public string StarSystem { get; set; }
+            public decimal ShipMarketID { get; set; }
+            public decimal TransferPrice { get; set; }
+            public decimal TransferTime { get; set; }
+            public decimal Value { get; set; }
+            public bool Hot { get; set; }
+            public bool InTransit { get; set; }
+
+            public Ship()
+            {
+                ShipID = Dec();
+                ShipType = Str();
+                ShipType_Localised = Str();
+                Name = Str();
+                StarSystem = Str();
+                ShipMarketID = Dec();
+                TransferPrice = Dec();
+                TransferTime = Dec();
+                Value = Dec();
+                Hot = Bool();
+                InTransit = Bool();
+            }
+
+            public class Item : Catch
+            {
+                public string Name { get; set; }
+                public string Name_Localised { get; set; }
+                public decimal StorageSlot { get; set; }
+                public string StarSystem { get; set; }
+                public decimal MarketID { get; set; }
+                public decimal TransferCost { get; set; }
+                public decimal TransferTime { get; set; }
+                public decimal BuyPrice { get; set; }
+                public bool Hot { get; set; }
+                public string EngineerModifications { get; set; }
+                public decimal Level { get; set; }
+                public decimal Quality { get; set; }
+                public bool InTransit { get; set; }
+
+                public Item()
+                {
+                    Name = Str();
+                    Name_Localised = Str();
+                    StorageSlot = Dec();
+                    StarSystem = Str();
+                    MarketID = Dec();
+                    TransferCost = Dec();
+                    TransferTime = Dec();
+                    BuyPrice = Dec();
+                    Hot = Bool();
+                    EngineerModifications = Str();
+                    Level = Dec();
+                    Quality = Dec();
+                    InTransit = Bool();
+                }
+            }
         }
     }
 

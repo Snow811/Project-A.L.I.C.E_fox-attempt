@@ -14,14 +14,18 @@ namespace ALICE_Events
     {
         public decimal Reward { get; set; }
         public string AwardingFaction { get; set; }
+        public string AwardingFaction_Localised { get; set; }
         public string VictimFaction { get; set; }
+        public string VictimFaction_Localised { get; set; }
 
         //Default Constructor
         public FactionKillBond()
         {
             Reward = Dec();
             AwardingFaction = Str();
+            AwardingFaction_Localised = Str();
             VictimFaction = Str();
+            VictimFaction_Localised = Str();
         }
     }
 

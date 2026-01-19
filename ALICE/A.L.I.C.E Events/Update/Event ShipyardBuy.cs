@@ -15,9 +15,12 @@ namespace ALICE_Events
         public string ShipType { get; set; }
         public string ShipType_Localised { get; set; }
         public decimal ShipPrice { get; set; }
+        public string SellOldShip { get; set; }
+        public decimal SellShipID { get; set; }
+        public decimal SellPrice { get; set; }
+        public decimal MarketID { get; set; }
         public string StoreOldShip { get; set; }
         public decimal StoreShipID { get; set; }
-        public decimal MarketID { get; set; }
 
         //Default Constructor
         public ShipyardBuy()
@@ -25,9 +28,12 @@ namespace ALICE_Events
             ShipType = Str();
             ShipType_Localised = Str();
             ShipPrice = Dec();
+            SellOldShip = Str();
+            SellShipID = Dec();
+            SellPrice = Dec();
+            MarketID = Dec();
             StoreOldShip = Str();
             StoreShipID = Dec();
-            MarketID = Dec();
         }
     }
 

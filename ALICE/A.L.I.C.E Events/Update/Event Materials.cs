@@ -13,16 +13,30 @@ namespace ALICE_Events
     /// </summary>
     public class Materials : Base
     {
-        public string Raw { get; set; }
-        public string Manufactured { get; set; }
-        public string Encoded { get; set; }
+        public List<Material> Raw { get; set; }
+        public List<Material> Manufactured { get; set; }
+        public List<Material> Encoded { get; set; }
 
         //Default Constructor
         public Materials()
         {
-            Raw = Str();
-            Manufactured = Str();
-            Encoded = Str();
+            Raw = new List<Material>();
+            Manufactured = new List<Material>();
+            Encoded = new List<Material>();
+        }
+
+        public class Material : Catch
+        {
+            public string Name { get; set; }
+            public string Name_Localised { get; set; }
+            public decimal Count { get; set; }
+
+            public Material()
+            {
+                Name = Str();
+                Name_Localised = Str();
+                Count = Dec();
+            }
         }
     }
 

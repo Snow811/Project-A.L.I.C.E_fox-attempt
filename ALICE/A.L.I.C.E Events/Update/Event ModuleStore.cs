@@ -17,7 +17,7 @@ namespace ALICE_Events
         public string StoredItem_Localised { get; set; }
         public string Ship { get; set; }
         public decimal ShipID { get; set; }
-        public string Hot { get; set; }
+        public bool Hot { get; set; }
         public string EngineerModifications { get; set; }
         public decimal Level { get; set; }
         public decimal Quality { get; set; }
@@ -31,7 +31,7 @@ namespace ALICE_Events
             StoredItem_Localised = Str();
             Ship = Str();
             ShipID = Dec();
-            Hot = Str();
+            Hot = Bool();
             EngineerModifications = Str();
             Level = Dec();
             Quality = Dec();

@@ -11,13 +11,15 @@ namespace ALICE_Events
     /// </summary>
     public class Repair : Base
     {
-        public string Items { get; set; }
+        public string Item { get; set; }
+        public string Item_Localised { get; set; }
         public decimal Cost { get; set; }
 
         //Default Constructor
         public Repair()
         {
-            Items = Str();
+            Item = Str();
+            Item_Localised = Str();
             Cost = Dec();
         }
     }

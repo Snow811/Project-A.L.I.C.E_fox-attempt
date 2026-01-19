@@ -18,7 +18,7 @@ namespace ALICE_Events
 
         //Default Constructor
         public DockingCancelled()
-        {
+        {            
             MarketID = Dec();
             StationName = Str();
             StationType = Str();

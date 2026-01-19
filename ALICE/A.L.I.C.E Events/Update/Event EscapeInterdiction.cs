@@ -14,13 +14,15 @@ namespace ALICE_Events
     public class EscapeInterdiction : Base
     {
         public string Interdictor { get; set; }
-        public string IsPlayer { get; set; }
+        public string Interdictor_Localised { get; set; }
+        public bool IsPlayer { get; set; }
 
         //Default Constructor
         public EscapeInterdiction()
         {
             Interdictor = Str();
-            IsPlayer = Str();
+            Interdictor_Localised = Str();
+            IsPlayer = Bool();
         }
     }
 

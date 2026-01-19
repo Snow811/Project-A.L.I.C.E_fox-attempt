@@ -12,18 +12,18 @@ namespace ALICE_Events
     /// </summary>
     public class DockingGranted : Base
     {
-        public decimal LandingPad { get; set; }
         public decimal MarketID { get; set; }
         public string StationName { get; set; }
         public string StationType { get; set; }
+        public decimal LandingPad { get; set; }
 
         //Default Constructor
         public DockingGranted()
         {
-            LandingPad = Dec();
             MarketID = Dec();
             StationName = Str();
             StationType = Str();
+            LandingPad = Dec();
         }
     }
 

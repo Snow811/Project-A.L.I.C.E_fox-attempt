@@ -12,39 +12,21 @@ namespace ALICE_Events
     public class ApproachSettlement : Base
     {
         public string Name { get; set; }
+        public string Name_Localised { get; set; }
         public decimal MarketID { get; set; }
-        public string StationFaction { get; set; }
-        public string StationGovernment { get; set; }
-        public string StationGovernment_Localised { get; set; }
-        public string StationAllegiance { get; set; }
-        public string StationServices { get; set; }
-        public string StationEconomy { get; set; }
-        public string StationEconomy_Localised { get; set; }
-        public string StationEconomies { get; set; }
-        public decimal SystemAddress { get; set; }
-        public decimal BodyID { get; set; }
-        public string BodyName { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
+        public decimal SystemAddress { get; set; }
 
         //Default Constructor
         public ApproachSettlement()
         {
             Name = Str();
+            Name_Localised = Str();
             MarketID = Dec();
-            StationFaction = Str();
-            StationGovernment = Str();
-            StationGovernment_Localised = Str();
-            StationAllegiance = Str();
-            StationServices = Str();
-            StationEconomy = Str();
-            StationEconomy_Localised = Str();
-            StationEconomies = Str();
-            SystemAddress = Dec();
-            BodyID = Dec();
-            BodyName = Str();
-            Latitude = Dec();
             Longitude = Dec();
+            Latitude = Dec();
+            SystemAddress = Dec();
         }
     }
 

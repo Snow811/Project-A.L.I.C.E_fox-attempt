@@ -14,16 +14,12 @@ namespace ALICE_Events
     {
         public string Name { get; set; }
         public decimal SystemAddress { get; set; }
-        public string StarClass { get; set; }
-        public decimal RemainingJumpsInRoute { get; set; }
 
         //Default Constructor
         public FSDTarget()
         {
             Name = Str();
             SystemAddress = Dec();
-            StarClass = Str();
-            RemainingJumpsInRoute = Dec();
         }
     }
 

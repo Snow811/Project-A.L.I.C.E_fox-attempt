@@ -18,7 +18,7 @@ namespace ALICE_Events
         public ReservoirReplenished()
         {
             FuelMain = Dec();
-            FuelReservoir = Dec();
+            FuelReservoir = Dec();            
         }
     }
 

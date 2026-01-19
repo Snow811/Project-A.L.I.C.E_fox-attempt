@@ -14,6 +14,8 @@ namespace ALICE_Events
         public string Slot { get; set; }
         public string SellItem { get; set; }
         public string SellItem_Localised { get; set; }
+        public string StoredItem { get; set; }
+        public string StoredItem_Localised { get; set; }
         public decimal SellPrice { get; set; }
         public string BuyItem { get; set; }
         public string BuyItem_Localised { get; set; }
@@ -28,6 +30,7 @@ namespace ALICE_Events
             Slot = Str();
             SellItem = Str();
             SellItem_Localised = Str();
+            StoredItem = Str();
             SellPrice = Dec();
             BuyItem = Str();
             BuyItem_Localised = Str();

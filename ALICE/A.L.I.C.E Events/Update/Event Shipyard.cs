@@ -25,9 +25,15 @@ namespace ALICE_Events
     /// </summary>
     public class Shipyard : Base
     {
+        //Shared Properties
         public decimal MarketID { get; set; }
         public string StationName { get; set; }
         public string StarSystem { get; set; }
+
+        //Shipyard.Json Properties
+        public bool Horizons { get; set; }
+        public bool AllowCobraMkIV { get; set; }
+        public List<Prices> PriceList { get; set; }
 
         //Default Constructor
         public Shipyard()
@@ -35,6 +41,25 @@ namespace ALICE_Events
             MarketID = Dec();
             StationName = Str();
             StarSystem = Str();
+            Horizons = Bool();
+            AllowCobraMkIV = Bool();
+            PriceList = new List<Prices>();
+        }
+
+        public class Prices : Catch
+        {
+            public decimal id { get; set; }
+            public string ShipType { get; set; }
+            public decimal ShipPrice { get; set; }
+            public string ShipType_Localised { get; set; }
+
+            public Prices()
+            {
+                id = Dec();
+                ShipType = Str();
+                ShipPrice = Dec();
+                ShipType_Localised = Str();
+            }
         }
     }
 

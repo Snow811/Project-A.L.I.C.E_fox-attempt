@@ -13,8 +13,6 @@ namespace ALICE_Events
     {
         public decimal MarketID { get; set; }
         public string StationName { get; set; }
-        public string StationType { get; set; }
-        public string CarrierDockingAccess { get; set; }
         public string StarSystem { get; set; }
 
         //Default Constructor
@@ -22,8 +20,6 @@ namespace ALICE_Events
         {
             MarketID = Dec();
             StationName = Str();
-            StationType = Str();
-            CarrierDockingAccess = Str();
             StarSystem = Str();
         }
     }

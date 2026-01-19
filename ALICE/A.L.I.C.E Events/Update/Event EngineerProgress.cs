@@ -12,14 +12,33 @@ namespace ALICE_Events
     /// </summary>
     public class EngineerProgress : Base
     {
-        public string Engineers { get; set; }
+        public List<Eng> Engineers { get; set; }
 
         //Default Constructor
         public EngineerProgress()
         {
-            Engineers = Str();
+            Engineers = new List<Eng>();
+        }
+
+        public class Eng : Catch
+        {
+            public string Engineer { get; set; }
+            public decimal EngineerID { get; set; }
+            public string Progress { get; set; }
+            public decimal RankProgress { get; set; }
+            public decimal Rank { get; set; }
+
+            public Eng()
+            {
+                Engineer = Str();
+                EngineerID = Dec();
+                Progress = Str();
+                RankProgress = Dec();
+                Rank = Dec();
+            }
         }
     }
+
 
     /// <summary>
     /// Event Logic & Data Storage Class

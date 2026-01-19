@@ -12,9 +12,7 @@ namespace ALICE_Events
     public class RestockVehicle : Base
     {
         public string Type { get; set; }
-        public string Type_Localised { get; set; }
         public string Loadout { get; set; }
-        public decimal ID { get; set; }
         public decimal Cost { get; set; }
         public decimal Count { get; set; }
 
@@ -22,9 +20,7 @@ namespace ALICE_Events
         public RestockVehicle()
         {
             Type = Str();
-            Type_Localised = Str();
             Loadout = Str();
-            ID = Dec();
             Cost = Dec();
             Count = Dec();
         }

@@ -15,7 +15,6 @@ namespace ALICE_Events
         public decimal MarketID { get; set; }
         public string StationName { get; set; }
         public string StationType { get; set; }
-        public string LandingPads { get; set; }
 
         //Default Constructor
         public DockingRequested()
@@ -23,7 +22,6 @@ namespace ALICE_Events
             MarketID = Dec();
             StationName = Str();
             StationType = Str();
-            LandingPads = Str();
         }
     }
 

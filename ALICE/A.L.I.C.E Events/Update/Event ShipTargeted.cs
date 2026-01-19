@@ -13,23 +13,33 @@ namespace ALICE_Events
     /// </summary>
     public class ShipTargeted : Base
     {
-        public string TargetLocked { get; set; }
+        //Stage 0:
+        public bool TargetLocked { get; set; }
         public string Ship { get; set; }
         public string Ship_Localised { get; set; }
         public decimal ScanStage { get; set; }
+
+        //Stage 1:
         public string PilotName { get; set; }
         public string PilotName_Localised { get; set; }
         public string PilotRank { get; set; }
+
+        //Stage 2:
         public decimal ShieldHealth { get; set; }
         public decimal HullHealth { get; set; }
+
+        //Stage 3:
         public string Faction { get; set; }
         public string LegalStatus { get; set; }
         public decimal Bounty { get; set; }
+        public string Subsystem { get; set; }
+        public string Subsystem_Localised { get; set; }
+        public decimal SubsystemHealth { get; set; }
 
         //Default Constructor
         public ShipTargeted()
         {
-            TargetLocked = Str();
+            TargetLocked = Bool();
             Ship = Str();
             Ship_Localised = Str();
             ScanStage = Dec();
@@ -41,6 +51,9 @@ namespace ALICE_Events
             Faction = Str();
             LegalStatus = Str();
             Bounty = Dec();
+            Subsystem = Str();
+            Subsystem_Localised = Str();
+            SubsystemHealth = Dec();
         }
     }
 
