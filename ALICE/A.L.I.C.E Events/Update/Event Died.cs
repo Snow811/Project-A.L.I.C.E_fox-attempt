@@ -3,6 +3,7 @@
 //Source Journal Line: { "timestamp":"2018-10-19T04:52:51Z", "event":"Died", "KillerName":"Shakez", "KillerShip":"anaconda", "KillerRank":"Deadly" }
 
 using System;
+using System.Collections.Generic;
 
 namespace ALICE_Events
 {

@@ -3,6 +3,7 @@
 //Source Journal Line: { "timestamp":"2018-10-02T04:28:34Z", "event":"RebootRepair", "Modules":[ "MainEngines", "Tinyhardpoint1" ] }
 
 using System;
+using System.Collections.Generic;
 
 namespace ALICE_Events
 {
