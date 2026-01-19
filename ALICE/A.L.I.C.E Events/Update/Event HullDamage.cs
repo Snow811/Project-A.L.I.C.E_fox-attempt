@@ -12,15 +12,15 @@ namespace ALICE_Events
     public class HullDamage : Base
     {
         public decimal Health { get; set; }
-        public bool PlayerPilot { get; set; }
-        public bool Fighter { get; set; }
+        public string PlayerPilot { get; set; }
+        public string Fighter { get; set; }
 
         //Default Constructor
         public HullDamage()
         {
             Health = Dec();
-            PlayerPilot = Bool();
-            Fighter = Bool();
+            PlayerPilot = Str();
+            Fighter = Str();
         }
     }
 

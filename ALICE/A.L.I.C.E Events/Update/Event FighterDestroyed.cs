@@ -13,7 +13,13 @@ namespace ALICE_Events
     /// </summary>
     public class FighterDestroyed : Base
     {
-        //No Properties
+        public decimal ID { get; set; }
+
+        //Default Constructor
+        public FighterDestroyed()
+        {
+            ID = Dec();
+        }
     }
 
     /// <summary>

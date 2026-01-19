@@ -14,12 +14,14 @@ namespace ALICE_Events
     {
         public string To { get; set; }
         public string Message { get; set; }
+        public string Sent { get; set; }
 
         //Default Constructor
         public SendText()
         {
             To = Str();
             Message = Str();
+            Sent = Str();
         }
     }
 

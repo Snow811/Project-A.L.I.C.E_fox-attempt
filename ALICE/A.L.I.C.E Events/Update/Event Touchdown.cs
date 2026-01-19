@@ -13,15 +13,33 @@ namespace ALICE_Events
     public class Touchdown : Base
     {
         public string PlayerControlled { get; set; }
+        public string Taxi { get; set; }
+        public string Multicrew { get; set; }
+        public string StarSystem { get; set; }
+        public decimal SystemAddress { get; set; }
+        public string Body { get; set; }
+        public decimal BodyID { get; set; }
+        public string OnStation { get; set; }
+        public string OnPlanet { get; set; }
         public decimal Latitude { get; set; }
         public decimal Longitude { get; set; }
+        public string NearestDestination { get; set; }
 
         //Default Constructor
         public Touchdown()
         {
             PlayerControlled = Str();
+            Taxi = Str();
+            Multicrew = Str();
+            StarSystem = Str();
+            SystemAddress = Dec();
+            Body = Str();
+            BodyID = Dec();
+            OnStation = Str();
+            OnPlanet = Str();
             Latitude = Dec();
             Longitude = Dec();
+            NearestDestination = Str();
         }
     }
 

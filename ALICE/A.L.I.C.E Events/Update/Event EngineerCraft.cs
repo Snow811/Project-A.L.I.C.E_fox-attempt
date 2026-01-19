@@ -16,68 +16,28 @@ namespace ALICE_Events
     {
         public string Slot { get; set; }
         public string Module { get; set; }
-        public string ApplyExperimentalEffect { get; set; }
+        public string Ingredients { get; set; }
         public string Engineer { get; set; }
         public decimal EngineerID { get; set; }
-        public string BlueprintName { get; set; }
         public decimal BlueprintID { get; set; }
+        public string BlueprintName { get; set; }
         public decimal Level { get; set; }
         public decimal Quality { get; set; }
-        public string ExperimentalEffect { get; set; }
-        public string ExperimentalEffect_Localised { get; set; }
-        public List<CraftModifier> Modifiers { get; set; }
-        public List<CraftIngredient> Ingredients { get; set; }
+        public string Modifiers { get; set; }
 
         //Default Constructor
         public EngineerCraft()
         {
             Slot = Str();
             Module = Str();
-            ApplyExperimentalEffect = Str();
+            Ingredients = Str();
             Engineer = Str();
             EngineerID = Dec();
-            BlueprintName = Str();
             BlueprintID = Dec();
+            BlueprintName = Str();
             Level = Dec();
             Quality = Dec();
-            ExperimentalEffect = Str();
-            ExperimentalEffect_Localised = Str();
-            Modifiers = new List<CraftModifier>();
-            Ingredients = new List<CraftIngredient>();
-        }
-
-        public class CraftModifier : Catch
-        {
-            public string Label { get; set; }
-            public decimal Value { get; set; }
-            public decimal OriginalValue { get; set; }
-            public bool LessIsGood { get; set; }
-            public string ValueStr { get; set; }
-            public string ValueStr_Localised { get; set; }
-
-            public CraftModifier()
-            {
-                Label = Str();
-                Value = Dec();
-                OriginalValue = Dec();
-                LessIsGood = Bool();
-                ValueStr = Str();
-                ValueStr_Localised = Str();
-            }
-        }
-
-        public class CraftIngredient : Catch
-        {
-            public string Name { get; set; }
-            public string Name_Localised { get; set; }
-            public decimal Count { get; set; }
-
-            public CraftIngredient()
-            {
-                Name = Str();
-                Name_Localised = Str();
-                Count = Dec();
-            }
+            Modifiers = Str();
         }
     }
 

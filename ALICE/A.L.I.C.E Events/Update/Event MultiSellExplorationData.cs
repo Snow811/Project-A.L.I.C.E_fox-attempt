@@ -12,7 +12,7 @@ namespace ALICE_Events
     /// </summary>
     public class MultiSellExplorationData : Base
     {
-        public List<Discover> Discovered { get; set; }
+        public string Discovered { get; set; }
         public decimal BaseValue { get; set; }
         public decimal Bonus { get; set; }
         public decimal TotalEarnings { get; set; }
@@ -20,22 +20,10 @@ namespace ALICE_Events
         //Default Constructor
         public MultiSellExplorationData()
         {
-            Discovered = new List<Discover>();
+            Discovered = Str();
             BaseValue = Dec();
             Bonus = Dec();
             TotalEarnings = Dec();
-        }
-
-        public class Discover : Catch
-        {
-            public string SystemName { get; set; }
-            public decimal NumBodies { get; set; }
-
-            public Discover()
-            {
-                SystemName = Str();
-                NumBodies = Dec();
-            }
         }
     }
 

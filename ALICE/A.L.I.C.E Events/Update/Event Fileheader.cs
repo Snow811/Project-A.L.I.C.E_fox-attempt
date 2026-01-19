@@ -13,6 +13,7 @@ namespace ALICE_Events
     {
         public decimal Part { get; set; }
         public string Language { get; set; }
+        public string Odyssey { get; set; }
         public string Gameversion { get; set; }
         public string Build { get; set; }
 
@@ -21,6 +22,7 @@ namespace ALICE_Events
         {
             Part = Dec();
             Language = Str();
+            Odyssey = Str();
             Gameversion = Str();
             Build = Str();
         }

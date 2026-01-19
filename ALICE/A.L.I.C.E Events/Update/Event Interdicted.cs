@@ -12,22 +12,18 @@ namespace ALICE_Events
     /// </summary>
     public class Interdicted : Base
     {
-        public bool Submitted { get; set; }
+        public string Submitted { get; set; }
         public string Interdictor { get; set; }
-        public string Interdictor_Localised { get; set; }
-        public bool IsPlayer { get; set; }
+        public string IsPlayer { get; set; }
         public string Faction { get; set; }
-        public decimal CombatRank { get; set; }
 
         //Default Constructor
         public Interdicted()
         {
-            Submitted = Bool();
+            Submitted = Str();
             Interdictor = Str();
-            Interdictor_Localised = Str();
-            IsPlayer = Bool();
+            IsPlayer = Str();
             Faction = Str();
-            CombatRank = Dec();
         }
     }
 

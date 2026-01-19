@@ -14,27 +14,27 @@ namespace ALICE_Events
         public decimal SystemAddress { get; set; }
         public string SignalName { get; set; }
         public string SignalName_Localised { get; set; }
+        public string SignalType { get; set; }
         public string USSType { get; set; }
         public string USSType_Localised { get; set; }
         public string SpawningState { get; set; }
         public string SpawningState_Localised { get; set; }
         public string SpawningFaction { get; set; }
-        public string SpawningFaction_Localised { get; set; }
         public decimal ThreatLevel { get; set; }
         public decimal TimeRemaining { get; set; }
-        public bool IsStation { get; set; }
 
         //Default Constructor
         public FSSSignalDiscovered()
         {
+            SystemAddress = Dec();
             SignalName = Str();
             SignalName_Localised = Str();
+            SignalType = Str();
             USSType = Str();
             USSType_Localised = Str();
             SpawningState = Str();
             SpawningState_Localised = Str();
             SpawningFaction = Str();
-            SpawningFaction_Localised = Str();
             ThreatLevel = Dec();
             TimeRemaining = Dec();
         }

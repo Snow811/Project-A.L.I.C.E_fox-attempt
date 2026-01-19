@@ -13,14 +13,20 @@ namespace ALICE_Events
     /// </summary>
     public class LaunchSRV : Base
     {
+        public string SRVType { get; set; }
+        public string SRVType_Localised { get; set; }
         public string Loadout { get; set; }
-        public bool PlayerControlled { get; set; }
+        public decimal ID { get; set; }
+        public string PlayerControlled { get; set; }
 
         //Default Constructor
         public LaunchSRV()
         {
+            SRVType = Str();
+            SRVType_Localised = Str();
             Loadout = Str();
-            PlayerControlled = Bool();
+            ID = Dec();
+            PlayerControlled = Str();
         }
     }
 

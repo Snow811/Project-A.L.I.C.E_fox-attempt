@@ -15,30 +15,14 @@ namespace ALICE_Events
     {
         public string Type { get; set; }
         public decimal Amount { get; set; }
-        public List<Fact> Factions { get; set; }
-        public string Faction { get; set; }
-        public decimal BrokerPercentage { get; set; }
+        public string Factions { get; set; }
 
         //Default Constructor
         public RedeemVoucher()
         {
             Type = Str();
             Amount = Dec();
-            Factions = new List<Fact>();
-            Faction = Str();
-            BrokerPercentage = Dec();
-        }
-
-        public class Fact : Catch
-        {
-            public string Faction { get; set; }
-            public decimal Amount { get; set; }
-
-            public Fact()
-            {
-                Faction = Str();
-                Amount = Dec();
-            }
+            Factions = Str();
         }
     }
 

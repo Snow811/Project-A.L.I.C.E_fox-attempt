@@ -11,22 +11,12 @@ namespace ALICE_Events
     /// </summary>
     public class Promotion : Base
     {
-        public decimal Empire { get; set; }
-        public decimal Combat { get; set; }
-        public decimal Trade { get; set; }
         public decimal Federation { get; set; }
-        public decimal Alliance { get; set; }
-        public decimal Independent { get; set; }
 
         //Default Constructor
         public Promotion()
         {
-            Empire = Dec();
-            Combat = Dec();
-            Trade = Dec();
             Federation = Dec();
-            Alliance = Dec();
-            Independent = Dec();
         }
     }
 

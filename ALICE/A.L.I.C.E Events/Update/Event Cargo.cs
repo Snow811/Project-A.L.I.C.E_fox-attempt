@@ -14,30 +14,14 @@ namespace ALICE_Events
     {
         public string Vessel { get; set; }
         public decimal Count { get; set; }
-        public List<CargoItem> Inventory { get; set; }
+        public string Inventory { get; set; }
 
         //Default Constructor
         public Cargo()
         {
             Vessel = Str();
             Count = Dec();
-            Inventory = new List<CargoItem>();
-        }
-
-        public class CargoItem : Catch
-        {
-            public string Name { get; set; }
-            public string Name_Localised { get; set; }
-            public decimal Count { get; set; }
-            public decimal Stolen { get; set; }
-
-            public CargoItem()
-            {
-                Name = Str();
-                Name_Localised = Str();
-                Count = Dec();
-                Stolen = Dec();
-            }
+            Inventory = Str();
         }
     }
 

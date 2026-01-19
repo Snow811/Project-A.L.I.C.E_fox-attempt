@@ -14,7 +14,6 @@ namespace ALICE_Events
         public decimal MissionID { get; set; }
         public string UpdateType { get; set; }
         public string CargoType { get; set; }
-        public string CargoType_Localised { get; set; }
         public decimal Count { get; set; }
         public decimal StartMarketID { get; set; }
         public decimal EndMarketID { get; set; }
@@ -29,7 +28,6 @@ namespace ALICE_Events
             MissionID = Dec();
             UpdateType = Str();
             CargoType = Str();
-            CargoType_Localised = Str();
             Count = Dec();
             StartMarketID = Dec();
             EndMarketID = Dec();

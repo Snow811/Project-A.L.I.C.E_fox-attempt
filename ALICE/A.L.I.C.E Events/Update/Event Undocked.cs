@@ -19,6 +19,8 @@ namespace ALICE_Events
         public string StationName { get; set; }
         public string StationType { get; set; }
         public decimal MarketID { get; set; }
+        public string Taxi { get; set; }
+        public string Multicrew { get; set; }
 
         //Default Constructor
         public Undocked()
@@ -26,6 +28,8 @@ namespace ALICE_Events
             StationName = Str();
             StationType = Str();
             MarketID = Dec();
+            Taxi = Str();
+            Multicrew = Str();
         }
     }
 

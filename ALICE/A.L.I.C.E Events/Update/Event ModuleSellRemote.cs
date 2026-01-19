@@ -21,7 +21,7 @@ namespace ALICE_Events
 
         //Default Constructor
         public ModuleSellRemote()
-        {            
+        {
             StorageSlot = Dec();
             SellItem = Str();
             SellItem_Localised = Str();

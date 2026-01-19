@@ -12,32 +12,16 @@ namespace ALICE_Events
     /// </summary>
     public class Missions : Base
     {
-        public List<Mission> Active { get; set; }
-        public List<Mission> Failed { get; set; }
-        public List<Mission> Complete { get; set; }
+        public string Active { get; set; }
+        public string Failed { get; set; }
+        public string Complete { get; set; }
 
         //Default Constructor
         public Missions()
         {
-            Active = new List<Mission>();
-            Failed = new List<Mission>();
-            Complete = new List<Mission>();
-        }
-
-        public class Mission : Catch
-        {
-            public decimal MissionID { get; set; }
-            public string Name { get; set; }
-            public bool PassengerMission { get; set; }
-            public decimal Expires { get; set; }
-
-            public Mission()
-            {
-                MissionID = Dec();
-                Name = Str();
-                PassengerMission = Bool();
-                Expires = Dec();
-            }
+            Active = Str();
+            Failed = Str();
+            Complete = Str();
         }
     }
 
