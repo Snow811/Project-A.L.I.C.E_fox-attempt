@@ -260,3 +260,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# Temporary files and old versions
+event-comparison-report-old.md
+generate_event_comparison.py

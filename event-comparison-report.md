@@ -1,78 +1,408 @@
-# Event Comparison Report: journout (new) vs Update (old)
+# Event Comparison Report
 
-Generated: Mon Jan 19 09:03:27 UTC 2026
+**Generated:** 2026-01-19 17:05:00 UTC
+
+This report compares events in the `journout` folder against all existing ALICE event folders:
+- `ALICE/A.L.I.C.E Events/Update`
+- `ALICE/A.L.I.C.E Events/Game Events`
+- `ALICE/A.L.I.C.E Events/Custom Events`
 
 ## Summary
 
-- **Completely new events**: 49
-- **Events with new variables**: 33
-- **Unchanged events**: 51
+- **Total events in journout:** 145
+- **Completely new events (not in any ALICE folder):** 32
+- **Events existing in Game Events or Custom Events (not in Update):** 17
+- **Events with new variables to merge:** 33
+- **Unchanged events:** 51
 
 ---
 
-## Completely New Events
+## Section 1: Completely New Events
 
-These events exist in journout but NOT in Update (need to be added):
+These events exist in `journout` but NOT in any ALICE event folder (Update, Game Events, or Custom Events).
+**Action:** These events need to be added to the appropriate ALICE event folder.
 
-- Event Backpack.cs
-- Event BackpackChange.cs
-- Event BookDropship.cs
-- Event Bounty.cs
-- Event CargoTransfer.cs
-- Event CarrierBankTransfer.cs
-- Event CarrierBuy.cs
-- Event CarrierCrewServices.cs
-- Event CarrierDecommission.cs
-- Event CarrierDepositFuel.cs
-- Event CarrierDockingPermission.cs
-- Event CarrierFinance.cs
-- Event CarrierJump.cs
-- Event CarrierJumpRequest.cs
-- Event CarrierLocation.cs
-- Event CarrierStats.cs
-- Event CarrierTradeOrder.cs
-- Event Commander.cs
-- Event CommitCrime.cs
-- Event CommunityGoal.cs
-- Event CommunityGoalJoin.cs
-- Event CommunityGoalReward.cs
-- Event CrewLaunchFighter.cs
-- Event CrimeVictim.cs
-- Event Disembark.cs
-- Event Docked.cs
-- Event DropshipDeploy.cs
-- Event Embark.cs
-- Event FSDJump.cs
-- Event FSSAllBodiesFound.cs
-- Event FSSDiscoveryScan.cs
-- Event LoadGame.cs
-- Event Loadout.cs
-- Event LoadoutEquipModule.cs
-- Event Location.cs
-- Event NavRoute.cs
-- Event NavRouteClear.cs
-- Event PayFines.cs
-- Event ReceiveText.cs
-- Event Scan.cs
-- Event ScanBaryCentre.cs
-- Event ShipLocker.cs
-- Event ShipyardBankDeposit.cs
-- Event StartJump.cs
-- Event SuitLoadout.cs
-- Event SupercruiseDestinationDrop.cs
-- Event SupercruiseEntry.cs
-- Event SupercruiseExit.cs
-- Event UseConsumable.cs
+### AppliedToSquadron
+
+- **File:** `Event AppliedToSquadron.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### Backpack
+
+- **File:** `Event Backpack.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### BackpackChange
+
+- **File:** `Event BackpackChange.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### BookDropship
+
+- **File:** `Event BookDropship.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### CargoTransfer
+
+- **File:** `Event CargoTransfer.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### CarrierBankTransfer
+
+- **File:** `Event CarrierBankTransfer.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierBuy
+
+- **File:** `Event CarrierBuy.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierCrewServices
+
+- **File:** `Event CarrierCrewServices.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierDecommission
+
+- **File:** `Event CarrierDecommission.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierDepositFuel
+
+- **File:** `Event CarrierDepositFuel.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierDockingPermission
+
+- **File:** `Event CarrierDockingPermission.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierFinance
+
+- **File:** `Event CarrierFinance.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierJumpCancelled
+
+- **File:** `Event CarrierJumpCancelled.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierJumpRequest
+
+- **File:** `Event CarrierJumpRequest.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierLocation
+
+- **File:** `Event CarrierLocation.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierStats
+
+- **File:** `Event CarrierStats.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CarrierTradeOrder
+
+- **File:** `Event CarrierTradeOrder.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### CommunityGoalJoin
+
+- **File:** `Event CommunityGoalJoin.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### CommunityGoalReward
+
+- **File:** `Event CommunityGoalReward.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### CrewLaunchFighter
+
+- **File:** `Event CrewLaunchFighter.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### CrimeVictim
+
+- **File:** `Event CrimeVictim.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### Disembark
+
+- **File:** `Event Disembark.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### DropshipDeploy
+
+- **File:** `Event DropshipDeploy.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### Embark
+
+- **File:** `Event Embark.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### JoinedSquadron
+
+- **File:** `Event JoinedSquadron.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### LoadoutEquipModule
+
+- **File:** `Event LoadoutEquipModule.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### NavRoute
+
+- **File:** `Event NavRoute.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### NavRouteClear
+
+- **File:** `Event NavRouteClear.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### PowerplayMerits
+
+- **File:** `Event PowerplayMerits.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### ScanBaryCentre
+
+- **File:** `Event ScanBaryCentre.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### SharedBookmarkToSquadron
+
+- **File:** `Event SharedBookmarkToSquadron.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### ShipLocker
+
+- **File:** `Event ShipLocker.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### ShipyardBankDeposit
+
+- **File:** `Event ShipyardBankDeposit.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Update)
+
+### SquadronApplicationApproved
+
+- **File:** `Event SquadronApplicationApproved.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### SquadronDemotion
+
+- **File:** `Event SquadronDemotion.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### SquadronPromotion
+
+- **File:** `Event SquadronPromotion.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### SuitLoadout
+
+- **File:** `Event SuitLoadout.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### SupercruiseDestinationDrop
+
+- **File:** `Event SupercruiseDestinationDrop.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
+
+### UseConsumable
+
+- **File:** `Event UseConsumable.cs`
+- **Status:** Not present in any ALICE folder
+- **Action:** Add to appropriate folder (likely Game Events or Update)
 
 ---
 
-## Events with New Variables
+## Section 2: Events in Game Events Folder
 
-These events exist in both directories but have new properties in journout that need to be merged:
+These events exist in `journout` and `Game Events` folder but NOT in `Update` folder.
+**Action:** May need to compare properties between journout and Game Events versions, or move to Update folder.
 
-### Event ApproachSettlement.cs
+### Bounty
 
-New properties to merge:
+- **File:** `Event Bounty.cs` (journout), `Bounty.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider moving to Update or keeping in Game Events
+
+### CarrierJump
+
+- **File:** `Event CarrierJump.cs` (journout), `CarrierJump.cs` (Game Events) - **Note:** Need to verify if exists in Game Events
+- **Current location:** Update likely has an old version
+- **Status:** May need property comparison
+- **Action:** Review and compare
+
+### Commander
+
+- **File:** `Event Commander.cs` (journout), `Commander.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### CommitCrime
+
+- **File:** `Event CommitCrime.cs` (journout), `CommitCrime.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### CommunityGoal
+
+- **File:** `Event CommunityGoal.cs` (journout), `CommunityGoal.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### Docked
+
+- **File:** `Event Docked.cs` (journout), `Docked.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### FSDJump
+
+- **File:** `Event FSDJump.cs` (journout), `FSDJump.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### FSSAllBodiesFound
+
+- **File:** `Event FSSAllBodiesFound.cs` (journout), `FSSAllBodiesFound.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### FSSDiscoveryScan
+
+- **File:** `Event FSSDiscoveryScan.cs` (journout), `FSSDiscoveryScan.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### LoadGame
+
+- **File:** `Event LoadGame.cs` (journout), `LoadGame.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### Loadout
+
+- **File:** `Event Loadout.cs` (journout), `Loadout.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### Location
+
+- **File:** `Event Location.cs` (journout), `Location.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### PayFines
+
+- **File:** `Event PayFines.cs` (journout), `PayFines.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### ReceiveText
+
+- **File:** `Event ReceiveText.cs` (journout), `ReceiveText.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### Scan
+
+- **File:** `Event Scan.cs` (journout), `Scan.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### StartJump
+
+- **File:** `Event StartJump.cs` (journout), `StartJump.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### SupercruiseEntry
+
+- **File:** `Event SupercruiseEntry.cs` (journout), `SupercruiseEntry.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+### SupercruiseExit
+
+- **File:** `Event SupercruiseExit.cs` (journout), `SupercruiseExit.cs` (Game Events)
+- **Current location:** Game Events
+- **Status:** Exists in Game Events but not in Update
+- **Action:** Compare properties and consider synchronization
+
+---
+
+## Section 3: Events with New Variables in Update Folder
+
+These events exist in both `journout` and `Update` folder but have new properties in journout that need to be merged into Update.
+**Action:** Add the new properties to the existing event class in the Update folder.
+
+### ApproachSettlement
+
+- **File:** `Event ApproachSettlement.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event ApproachSettlement.cs
+
+**New properties to merge:**
 - `BodyID`
 - `BodyName`
 - `StationAllegiance`
@@ -84,70 +414,118 @@ New properties to merge:
 - `StationGovernment_Localised`
 - `StationServices`
 
-### Event Cargo.cs
+### Cargo
 
-New properties to merge:
+- **File:** `Event Cargo.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Cargo.cs
+
+**New properties to merge:**
 - `Inventory`
 
-### Event DockSRV.cs
+### DockSRV
 
-New properties to merge:
+- **File:** `Event DockSRV.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event DockSRV.cs
+
+**New properties to merge:**
 - `ID`
 - `SRVType`
 - `SRVType_Localised`
 
-### Event DockingRequested.cs
+### DockingRequested
 
-New properties to merge:
+- **File:** `Event DockingRequested.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event DockingRequested.cs
+
+**New properties to merge:**
 - `LandingPads`
 
-### Event EngineerCraft.cs
+### EngineerCraft
 
-New properties to merge:
+- **File:** `Event EngineerCraft.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event EngineerCraft.cs
+
+**New properties to merge:**
 - `Ingredients`
 - `Modifiers`
 
-### Event EngineerProgress.cs
+### EngineerProgress
 
-New properties to merge:
+- **File:** `Event EngineerProgress.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event EngineerProgress.cs
+
+**New properties to merge:**
 - `Engineers`
 
-### Event FSDTarget.cs
+### FSDTarget
 
-New properties to merge:
+- **File:** `Event FSDTarget.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event FSDTarget.cs
+
+**New properties to merge:**
 - `RemainingJumpsInRoute`
 - `StarClass`
 
-### Event FSSSignalDiscovered.cs
+### FSSSignalDiscovered
 
-New properties to merge:
+- **File:** `Event FSSSignalDiscovered.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event FSSSignalDiscovered.cs
+
+**New properties to merge:**
 - `SignalType`
 
-### Event FighterDestroyed.cs
+### FighterDestroyed
 
-New properties to merge:
+- **File:** `Event FighterDestroyed.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event FighterDestroyed.cs
+
+**New properties to merge:**
 - `ID`
 
-### Event FighterRebuilt.cs
+### FighterRebuilt
 
-New properties to merge:
+- **File:** `Event FighterRebuilt.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event FighterRebuilt.cs
+
+**New properties to merge:**
 - `ID`
 
-### Event Fileheader.cs
+### Fileheader
 
-New properties to merge:
+- **File:** `Event Fileheader.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Fileheader.cs
+
+**New properties to merge:**
 - `Odyssey`
 
-### Event LaunchSRV.cs
+### LaunchSRV
 
-New properties to merge:
+- **File:** `Event LaunchSRV.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event LaunchSRV.cs
+
+**New properties to merge:**
 - `ID`
 - `SRVType`
 - `SRVType_Localised`
 
-### Event Liftoff.cs
+### Liftoff
 
-New properties to merge:
+- **File:** `Event Liftoff.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Liftoff.cs
+
+**New properties to merge:**
 - `Body`
 - `BodyID`
 - `Multicrew`
@@ -158,109 +536,181 @@ New properties to merge:
 - `SystemAddress`
 - `Taxi`
 
-### Event Market.cs
+### Market
 
-New properties to merge:
+- **File:** `Event Market.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Market.cs
+
+**New properties to merge:**
 - `CarrierDockingAccess`
 - `StationType`
 
-### Event Materials.cs
+### Materials
 
-New properties to merge:
+- **File:** `Event Materials.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Materials.cs
+
+**New properties to merge:**
 - `Encoded`
 - `Manufactured`
 - `Raw`
 
-### Event MissionCompleted.cs
+### MissionCompleted
 
-New properties to merge:
+- **File:** `Event MissionCompleted.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event MissionCompleted.cs
+
+**New properties to merge:**
 - `FactionEffects`
 - `LocalisedName`
 - `MaterialsReward`
 
-### Event MissionRedirected.cs
+### MissionRedirected
 
-New properties to merge:
+- **File:** `Event MissionRedirected.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event MissionRedirected.cs
+
+**New properties to merge:**
 - `LocalisedName`
 
-### Event Missions.cs
+### Missions
 
-New properties to merge:
+- **File:** `Event Missions.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Missions.cs
+
+**New properties to merge:**
 - `Active`
 - `Complete`
 - `Failed`
 
-### Event MultiSellExplorationData.cs
+### MultiSellExplorationData
 
-New properties to merge:
+- **File:** `Event MultiSellExplorationData.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event MultiSellExplorationData.cs
+
+**New properties to merge:**
 - `Discovered`
 
-### Event Progress.cs
+### Progress
 
-New properties to merge:
+- **File:** `Event Progress.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Progress.cs
+
+**New properties to merge:**
 - `Exobiologist`
 - `Soldier`
 
-### Event Rank.cs
+### Rank
 
-New properties to merge:
+- **File:** `Event Rank.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Rank.cs
+
+**New properties to merge:**
 - `Exobiologist`
 - `Soldier`
 
-### Event RedeemVoucher.cs
+### RedeemVoucher
 
-New properties to merge:
+- **File:** `Event RedeemVoucher.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event RedeemVoucher.cs
+
+**New properties to merge:**
 - `Factions`
 
-### Event Repair.cs
+### Repair
 
-New properties to merge:
+- **File:** `Event Repair.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Repair.cs
+
+**New properties to merge:**
 - `Items`
 
-### Event RestockVehicle.cs
+### RestockVehicle
 
-New properties to merge:
+- **File:** `Event RestockVehicle.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event RestockVehicle.cs
+
+**New properties to merge:**
 - `ID`
 - `Type_Localised`
 
-### Event SendText.cs
+### SendText
 
-New properties to merge:
+- **File:** `Event SendText.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event SendText.cs
+
+**New properties to merge:**
 - `Sent`
 
-### Event SquadronStartup.cs
+### SquadronStartup
 
-New properties to merge:
+- **File:** `Event SquadronStartup.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event SquadronStartup.cs
+
+**New properties to merge:**
 - `CurrentRankName`
 - `CurrentRankName_Localised`
 - `SquadronID`
 
-### Event Statistics.cs
+### Statistics
 
-New properties to merge:
+- **File:** `Event Statistics.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Statistics.cs
+
+**New properties to merge:**
 - `Exobiology`
 - `FLEETCARRIER`
 - `Squadron`
 
-### Event StoredModules.cs
+### StoredModules
 
-New properties to merge:
+- **File:** `Event StoredModules.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event StoredModules.cs
+
+**New properties to merge:**
 - `Items`
 
-### Event StoredShips.cs
+### StoredShips
 
-New properties to merge:
+- **File:** `Event StoredShips.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event StoredShips.cs
+
+**New properties to merge:**
 - `ShipsHere`
 - `ShipsRemote`
 
-### Event Synthesis.cs
+### Synthesis
 
-New properties to merge:
+- **File:** `Event Synthesis.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Synthesis.cs
+
+**New properties to merge:**
 - `Materials`
 
-### Event Touchdown.cs
+### Touchdown
 
-New properties to merge:
+- **File:** `Event Touchdown.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Touchdown.cs
+
+**New properties to merge:**
 - `Body`
 - `BodyID`
 - `Multicrew`
@@ -271,22 +721,39 @@ New properties to merge:
 - `SystemAddress`
 - `Taxi`
 
-### Event Undocked.cs
+### Undocked
 
-New properties to merge:
+- **File:** `Event Undocked.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event Undocked.cs
+
+**New properties to merge:**
 - `Multicrew`
 - `Taxi`
 
-### Event WingJoin.cs
+### WingJoin
 
-New properties to merge:
+- **File:** `Event WingJoin.cs`
+- **Current location:** Update folder
+- **Action:** Merge new properties into Update/Event WingJoin.cs
+
+**New properties to merge:**
 - `Others`
-
 
 ---
 
 ## Notes
 
-- **journout** = New/updated files
-- **Update** = Old files
+- **journout** = New/updated event files
+- **Update** = Existing event files in Update folder
+- **Game Events** = Existing event files in Game Events folder (note: no "Event " prefix in filenames)
+- **Custom Events** = Custom event files (these are application-specific events, not Elite Dangerous journal events)
 - Properties were extracted using regex pattern matching for public C# properties
+- This report now properly accounts for all three ALICE event folders
+
+## Action Summary
+
+1. **Add 32 completely new events** to the appropriate ALICE folder
+2. **Review 17 events in Game Events folder** - compare with journout versions and determine if they need updates or should be moved
+3. **Merge new properties into 33 existing events** in the Update folder
+4. **51 events are unchanged** and require no action
