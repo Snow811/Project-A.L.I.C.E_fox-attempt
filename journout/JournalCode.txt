@@ -1,3 +1,9 @@
+else if (EventName == "AppliedToSquadron")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.AppliedToSquadron>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.AppliedToSquadron.Logic();
+}
 else if (EventName == "ApproachBody")
 {
     var Event = JsonConvert.DeserializeObject<ALICE_Events.ApproachBody>(RawLine);
@@ -105,6 +111,12 @@ else if (EventName == "CarrierJump")
     var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierJump>(RawLine);
     Manager.UpdateEvents(EventName, Event);
     Manager.CarrierJump.Logic();
+}
+else if (EventName == "CarrierJumpCancelled")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.CarrierJumpCancelled>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.CarrierJumpCancelled.Logic();
 }
 else if (EventName == "CarrierJumpRequest")
 {
@@ -346,6 +358,12 @@ else if (EventName == "JetConeBoost")
     Manager.UpdateEvents(EventName, Event);
     Manager.JetConeBoost.Logic();
 }
+else if (EventName == "JoinedSquadron")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.JoinedSquadron>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.JoinedSquadron.Logic();
+}
 else if (EventName == "LaunchSRV")
 {
     var Event = JsonConvert.DeserializeObject<ALICE_Events.LaunchSRV>(RawLine);
@@ -484,6 +502,12 @@ else if (EventName == "ModuleStore")
     Manager.UpdateEvents(EventName, Event);
     Manager.ModuleStore.Logic();
 }
+else if (EventName == "ModuleSwap")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.ModuleSwap>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.ModuleSwap.Logic();
+}
 else if (EventName == "MultiSellExplorationData")
 {
     var Event = JsonConvert.DeserializeObject<ALICE_Events.MultiSellExplorationData>(RawLine);
@@ -531,6 +555,18 @@ else if (EventName == "PayFines")
     var Event = JsonConvert.DeserializeObject<ALICE_Events.PayFines>(RawLine);
     Manager.UpdateEvents(EventName, Event);
     Manager.PayFines.Logic();
+}
+else if (EventName == "Powerplay")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.Powerplay>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.Powerplay.Logic();
+}
+else if (EventName == "PowerplayMerits")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.PowerplayMerits>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.PowerplayMerits.Logic();
 }
 else if (EventName == "Progress")
 {
@@ -628,6 +664,18 @@ else if (EventName == "SendText")
     Manager.UpdateEvents(EventName, Event);
     Manager.SendText.Logic();
 }
+else if (EventName == "SetUserShipName")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SetUserShipName>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SetUserShipName.Logic();
+}
+else if (EventName == "SharedBookmarkToSquadron")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SharedBookmarkToSquadron>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SharedBookmarkToSquadron.Logic();
+}
 else if (EventName == "ShieldState")
 {
     var Event = JsonConvert.DeserializeObject<ALICE_Events.ShieldState>(RawLine);
@@ -687,6 +735,24 @@ else if (EventName == "Shutdown")
     var Event = JsonConvert.DeserializeObject<ALICE_Events.Shutdown>(RawLine);
     Manager.UpdateEvents(EventName, Event);
     Manager.Shutdown.Logic();
+}
+else if (EventName == "SquadronApplicationApproved")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SquadronApplicationApproved>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SquadronApplicationApproved.Logic();
+}
+else if (EventName == "SquadronDemotion")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SquadronDemotion>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SquadronDemotion.Logic();
+}
+else if (EventName == "SquadronPromotion")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.SquadronPromotion>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.SquadronPromotion.Logic();
 }
 else if (EventName == "SquadronStartup")
 {
@@ -783,6 +849,12 @@ else if (EventName == "WingAdd")
     var Event = JsonConvert.DeserializeObject<ALICE_Events.WingAdd>(RawLine);
     Manager.UpdateEvents(EventName, Event);
     Manager.WingAdd.Logic();
+}
+else if (EventName == "WingInvite")
+{
+    var Event = JsonConvert.DeserializeObject<ALICE_Events.WingInvite>(RawLine);
+    Manager.UpdateEvents(EventName, Event);
+    Manager.WingInvite.Logic();
 }
 else if (EventName == "WingJoin")
 {
