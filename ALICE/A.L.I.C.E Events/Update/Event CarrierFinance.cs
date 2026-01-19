@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2026-01-07T15:35:49Z", "event":"CarrierFinance", "CarrierID":3714546688, "CarrierType":"SquadronCarrier", "CarrierBalance":815000000, "ReserveBalance":0, "AvailableBalance":815000000, "ReservePercent":0, "TaxRate_pioneersupplies":5, "TaxRate_shipyard":0, "TaxRate_rearm":0, "TaxRate_outfitting":0, "TaxRate_refuel":0, "TaxRate_repair":0 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_CarrierFinance((CarrierFinance)GetEvent());

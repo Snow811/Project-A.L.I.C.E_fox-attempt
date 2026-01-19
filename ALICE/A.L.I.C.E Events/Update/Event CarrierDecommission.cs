@@ -3,13 +3,6 @@
 //Source Journal Line: { "timestamp":"2025-11-12T09:27:45Z", "event":"CarrierDecommission", "CarrierID":3703130368, "CarrierType":"FleetCarrier", "ScrapRefund":5408435600, "ScrapTime":1763622000 }
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ALICE_Ships_Datalink_Interface;
-using ALICE_Command_Interface;
-using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -24,12 +17,9 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
-                try
-                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
-                }
             }
 
             //GameState.Logic_CarrierDecommission((CarrierDecommission)GetEvent());
