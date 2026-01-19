@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2026-01-10T22:23:39Z", "event":"SuitLoadout", "SuitID":1763747430586625, "SuitName":"tacticalsuit_class2", "SuitName_Localised":"$TacticalSuit_Class1_Name;", "SuitMods":[ "suit_reducedtoolbatteryconsumption" ], "LoadoutID":4293000002, "LoadoutName":"combat 2", "Modules":[ { "SlotName":"PrimaryWeapon1", "SuitModuleID":1763896492543420, "ModuleName":"wpn_m_submachinegun_laser_fauto", "ModuleName_Localised":"TK Eclipse", "Class":3, "WeaponMods":[ "weapon_handling" ] }, { "SlotName":"PrimaryWeapon2", "SuitModuleID":1766338459331283, "ModuleName":"wpn_m_submachinegun_kinetic_fauto", "ModuleName_Localised":"Karma C-44", "Class":3, "WeaponMods":[  ] }, { "SlotName":"SecondaryWeapon", "SuitModuleID":1763896499181480, "ModuleName":"wpn_s_pistol_laser_sauto", "ModuleName_Localised":"TK Zenith", "Class":3, "WeaponMods":[ "weapon_suppression_pressurised" ] } ] }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_SuitLoadout((SuitLoadout)GetEvent());

@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2026-01-15T17:51:50Z", "event":"SupercruiseExit", "Taxi":false, "Multicrew":false, "StarSystem":"Rho Ophiuchi Sector IH-U b3-1", "SystemAddress":2870783649369, "Body":"Rho Ophiuchi Sector IH-U b3-1", "BodyID":0, "BodyType":"Star" }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_SupercruiseExit((SupercruiseExit)GetEvent());

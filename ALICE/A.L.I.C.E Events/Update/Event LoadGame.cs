@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2026-01-09T10:47:16Z", "event":"LoadGame", "FID":"F2812796", "Commander":"Snowythefox", "Horizons":true, "Odyssey":true, "Ship":"TacticalSuit_Class2", "Ship_Localised":"$TacticalSuit_Class1_Name;", "ShipID":4293000002, "ShipName":"", "ShipIdent":"", "FuelLevel":1.000000, "FuelCapacity":1.000000, "GameMode":"Group", "Group":"pilots trade network", "Credits":845383025, "Loan":0, "language":"English/UK", "gameversion":"4.3.0.1", "build":"r322188/r0 " }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_LoadGame((LoadGame)GetEvent());

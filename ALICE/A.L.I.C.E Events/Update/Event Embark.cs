@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2026-01-10T21:19:57Z", "event":"Embark", "SRV":false, "Taxi":false, "Multicrew":false, "ID":8, "Crew":[ { "Name":"RIPTHEREAPER", "Role":"Idle" }, { "Name":"TOMOE'", "Role":"Idle" } ], "StarSystem":"Gali", "SystemAddress":6680855220970, "Body":"Chadwick Dock", "BodyID":39, "OnStation":true, "OnPlanet":false, "StationName":"Chadwick Dock", "StationType":"Coriolis", "MarketID":3230817536 }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_Embark((Embark)GetEvent());

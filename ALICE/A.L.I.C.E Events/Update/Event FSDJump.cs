@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2026-01-15T03:49:40Z", "event":"FSDJump", "Taxi":false, "Multicrew":false, "StarSystem":"V886 Centauri", "SystemAddress":2931071912299, "StarPos":[45.15625,12.12500,26.96875], "SystemAllegiance":"Independent", "SystemEconomy":"$economy_Refinery;", "SystemEconomy_Localised":"Refinery", "SystemSecondEconomy":"$economy_Extraction;", "SystemSecondEconomy_Localised":"Extraction", "SystemGovernment":"$government_Democracy;", "SystemGovernment_Localised":"Democracy", "SystemSecurity":"$SYSTEM_SECURITY_medium;", "SystemSecurity_Localised":"Medium Security", "Population":5328590, "Body":"V886 Centauri", "BodyID":0, "BodyType":"Star", "ControllingPower":"Yuri Grom", "Powers":[ "A. Lavigny-Duval", "Aisling Duval", "Edmund Mahon", "Felicia Winters", "Yuri Grom", "Zemina Torval" ], "PowerplayState":"Stronghold", "PowerplayStateControlProgress":0.360524, "PowerplayStateReinforcement":29846, "PowerplayStateUndermining":29522, "JumpDist":36.176, "FuelUsed":6.045356, "FuelLevel":14.461352, "BoostUsed":4, "Factions":[ { "Name":"Sirius Corporation", "FactionState":"Election", "Government":"Corporate", "Influence":0.139139, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":100.000000, "PendingStates":[ { "State":"Expansion", "Trend":0 } ], "ActiveStates":[ { "State":"Election" } ] }, { "Name":"Azimuth Biotech", "FactionState":"None", "Government":"Corporate", "Influence":0.053053, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "PendingStates":[ { "State":"Expansion", "Trend":0 } ], "RecoveringStates":[ { "State":"War", "Trend":0 } ] }, { "Name":"V886 Centauri Future", "FactionState":"None", "Government":"Democracy", "Influence":0.109109, "Allegiance":"Federation", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":15.000000, "RecoveringStates":[ { "State":"War", "Trend":0 } ] }, { "Name":"Bureau of V886 Centauri", "FactionState":"Election", "Government":"Dictatorship", "Influence":0.077077, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "ActiveStates":[ { "State":"Election" } ] }, { "Name":"V886 Centauri Corporation", "FactionState":"Election", "Government":"Corporate", "Influence":0.139139, "Allegiance":"Federation", "Happiness":"$Faction_HappinessBand1;", "Happiness_Localised":"Elated", "MyReputation":0.000000, "ActiveStates":[ { "State":"Boom" }, { "State":"Election" } ] }, { "Name":"V886 Centauri Family", "FactionState":"None", "Government":"Anarchy", "Influence":0.010010, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000 }, { "Name":"Independent Rescue Coalition", "FactionState":"None", "Government":"Corporate", "Influence":0.010010, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000 }, { "Name":"United V886 Centauri Autocracy", "FactionState":"Election", "Government":"Dictatorship", "Influence":0.077077, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand2;", "Happiness_Localised":"Happy", "MyReputation":0.000000, "ActiveStates":[ { "State":"Election" } ] }, { "Name":"Law of Demeter", "FactionState":"Boom", "Government":"Democracy", "Influence":0.385385, "Allegiance":"Independent", "Happiness":"$Faction_HappinessBand1;", "Happiness_Localised":"Elated", "MyReputation":0.000000, "ActiveStates":[ { "State":"Boom" }, { "State":"CivilLiberty" } ] } ], "SystemFaction":{ "Name":"Law of Demeter", "FactionState":"Boom" }, "Conflicts":[ { "WarType":"election", "Status":"active", "Faction1":{ "Name":"Sirius Corporation", "Stake":"Hair Synthetics Complex", "WonDays":1 }, "Faction2":{ "Name":"V886 Centauri Corporation", "Stake":"Garriott Terminal", "WonDays":0 } }, { "WarType":"war", "Status":"", "Faction1":{ "Name":"Azimuth Biotech", "Stake":"Kook Astrophysics Forum", "WonDays":0 }, "Faction2":{ "Name":"V886 Centauri Future", "Stake":"Holdstock Silo", "WonDays":4 } }, { "WarType":"election", "Status":"active", "Faction1":{ "Name":"Bureau of V886 Centauri", "Stake":"Lavigne Astrophysics Laboratory", "WonDays":2 }, "Faction2":{ "Name":"United V886 Centauri Autocracy", "Stake":"Sasaki Industrial Complex", "WonDays":1 } } ] }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_FSDJump((FSDJump)GetEvent());

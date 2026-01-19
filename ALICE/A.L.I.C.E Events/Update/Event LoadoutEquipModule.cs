@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2026-01-10T21:52:28Z", "event":"LoadoutEquipModule", "LoadoutName":"combat 2", "SuitID":1763747430586625, "SuitName":"tacticalsuit_class2", "SuitName_Localised":"$TacticalSuit_Class1_Name;", "LoadoutID":4293000002, "SlotName":"SecondaryWeapon", "ModuleName":"wpn_s_pistol_laser_sauto", "ModuleName_Localised":"TK Zenith", "Class":3, "WeaponMods":[ "weapon_suppression_pressurised" ], "SuitModuleID":1763896499181480 }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_LoadoutEquipModule((LoadoutEquipModule)GetEvent());

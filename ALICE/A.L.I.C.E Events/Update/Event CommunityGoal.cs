@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2026-01-16T00:18:44Z", "event":"CommunityGoal", "CurrentGoals":[ { "CGID":840, "Title":"Distant Worlds III Deep-Space Infrastructure Project", "SystemName":"Alrai", "MarketName":"Surveyor’s Reach", "Expiry":"2026-01-17T16:00:00Z", "IsComplete":false, "CurrentTotal":250493335, "PlayerContribution":1232, "NumContributors":16651, "TopTier":{ "Name":"Tier 5", "Bonus":"" }, "TopRankSize":10, "PlayerInTopRank":false, "TierReached":"Tier 3", "PlayerPercentileBand":100, "Bonus":45000000 } ] }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_CommunityGoal((CommunityGoal)GetEvent());

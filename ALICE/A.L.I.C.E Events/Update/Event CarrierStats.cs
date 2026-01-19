@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2025-11-12T09:18:46Z", "event":"CarrierStats", "CarrierID":3703130368, "CarrierType":"FleetCarrier", "Callsign":"QZQ-08V", "Name":"FOXBOX", "DockingAccess":"friends", "AllowNotorious":false, "FuelLevel":930, "JumpRangeCurr":500.000000, "JumpRangeMax":500.000000, "PendingDecommission":false, "SpaceUsage":{ "TotalCapacity":25000, "Crew":6370, "Cargo":108, "CargoSpaceReserved":0, "ShipPacks":0, "ModulePacks":0, "FreeSpace":18522 }, "Finance":{ "CarrierBalance":2738156167, "ReserveBalance":2359318062, "AvailableBalance":378838105, "ReservePercent":86, "TaxRate_pioneersupplies":5, "TaxRate_shipyard":5, "TaxRate_rearm":5, "TaxRate_outfitting":5, "TaxRate_refuel":5, "TaxRate_repair":5 }, "Crew":[ { "CrewRole":"BlackMarket", "Activated":false }, { "CrewRole":"Captain", "Activated":true, "Enabled":true, "CrewName":"Kim Prifti" }, { "CrewRole":"Refuel", "Activated":true, "Enabled":true, "CrewName":"Tatiana Coleman" }, { "CrewRole":"Repair", "Activated":true, "Enabled":true, "CrewName":"Alanah Wise" }, { "CrewRole":"Rearm", "Activated":true, "Enabled":true, "CrewName":"Berlyn Hays" }, { "CrewRole":"Commodities", "Activated":true, "Enabled":true, "CrewName":"Clover Lewis" }, { "CrewRole":"VoucherRedemption", "Activated":true, "Enabled":true, "CrewName":"Jazmine Pickett" }, { "CrewRole":"Exploration", "Activated":true, "Enabled":true, "CrewName":"Scott Richmond" }, { "CrewRole":"Shipyard", "Activated":true, "Enabled":true, "CrewName":"Meera Stein" }, { "CrewRole":"Outfitting", "Activated":true, "Enabled":true, "CrewName":"Gretel Copeland" }, { "CrewRole":"CarrierFuel", "Activated":true, "Enabled":true, "CrewName":"Presley Harper" }, { "CrewRole":"VistaGenomics", "Activated":true, "Enabled":true, "CrewName":"Orval Wilkins" }, { "CrewRole":"PioneerSupplies", "Activated":true, "Enabled":true, "CrewName":"Jackson Holmes" }, { "CrewRole":"Bartender", "Activated":true, "Enabled":true, "CrewName":"Kristal Ward" } ], "ShipPacks":[  ], "ModulePacks":[  ] }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_CarrierStats((CarrierStats)GetEvent());

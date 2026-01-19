@@ -3,6 +3,13 @@
 //Source Journal Line: { "timestamp":"2026-01-17T18:34:42Z", "event":"Bounty", "Rewards":[ { "Faction":"MADDISON Interstellar", "Reward":416479 } ], "PilotName":"$npc_name_decorate:#name=Douglas Alexander Frank Torrance;", "PilotName_Localised":"Douglas Alexander Frank Torrance", "Target":"federation_dropship_mkii", "Target_Localised":"Federal Assault Ship", "TotalReward":416479, "VictimFaction":"Kigah Drug Empire" }
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ALICE_Ships_Datalink_Interface;
+using ALICE_Command_Interface;
+using ALICE_Internal;
 
 namespace ALICE_Events
 {
@@ -17,9 +24,12 @@ namespace ALICE_Events
         {
             if (Manager.WriteVariables && WriteVariables)
             {
+                try
+                {
                     Variables_Clear();
                     Variables_Generate();
                     Variables_Write();
+                }
             }
 
             //GameState.Logic_Bounty((Bounty)GetEvent());
