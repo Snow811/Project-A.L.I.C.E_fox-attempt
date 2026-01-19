@@ -17,19 +17,7 @@ namespace ALICE_Events
         //Default Constructor
         public Music()
         {
-            MusicTrack = "NoTrack";
-        }
-
-        public class Discover : Catch
-        {
-            public string SystemName { get; set; }
-            public decimal NumBodies { get; set; }
-
-            public Discover()
-            {
-                SystemName = Str();
-                NumBodies = Dec();
-            }
+            MusicTrack = Str();
         }
     }
 

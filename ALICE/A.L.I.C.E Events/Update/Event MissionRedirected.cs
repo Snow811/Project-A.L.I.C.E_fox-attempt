@@ -11,8 +11,9 @@ namespace ALICE_Events
     /// </summary>
     public class MissionRedirected : Base
     {
-        public string Name { get; set; }
         public decimal MissionID { get; set; }
+        public string Name { get; set; }
+        public string LocalisedName { get; set; }
         public string NewDestinationStation { get; set; }
         public string NewDestinationSystem { get; set; }
         public string OldDestinationStation { get; set; }
@@ -21,8 +22,9 @@ namespace ALICE_Events
         //Default Constructor
         public MissionRedirected()
         {
-            Name = Str();
             MissionID = Dec();
+            Name = Str();
+            LocalisedName = Str();
             NewDestinationStation = Str();
             NewDestinationSystem = Str();
             OldDestinationStation = Str();

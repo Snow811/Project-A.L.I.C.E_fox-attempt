@@ -16,18 +16,12 @@ namespace ALICE_Events
         public string LocalisedName { get; set; }
         public string TargetType { get; set; }
         public string TargetType_Localised { get; set; }
-        public decimal Donation { get; set; }
-        public string Commodity { get; set; }
-        public string Commodity_Localised { get; set; }
-        public decimal Count { get; set; }
         public string TargetFaction { get; set; }
         public decimal KillCount { get; set; }
         public string DestinationSystem { get; set; }
         public string DestinationStation { get; set; }
-        public string Target { get; set; }
-        public string Target_Localised { get; set; }
-        public DateTime Expiry { get; set; }
-        public bool Wing { get; set; }
+        public string Expiry { get; set; }
+        public string Wing { get; set; }
         public string Influence { get; set; }
         public string Reputation { get; set; }
         public decimal Reward { get; set; }
@@ -41,18 +35,12 @@ namespace ALICE_Events
             LocalisedName = Str();
             TargetType = Str();
             TargetType_Localised = Str();
-            Donation = Dec();
-            Commodity = Str();
-            Commodity_Localised = Str();
-            Count = Dec();
             TargetFaction = Str();
             KillCount = Dec();
             DestinationSystem = Str();
             DestinationStation = Str();
-            Target = Str();
-            Target_Localised = Str();
-            Expiry = Dtg();
-            Wing = Bool();
+            Expiry = Str();
+            Wing = Str();
             Influence = Str();
             Reputation = Str();
             Reward = Dec();

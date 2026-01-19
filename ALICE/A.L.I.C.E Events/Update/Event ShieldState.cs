@@ -11,12 +11,12 @@ namespace ALICE_Events
     /// </summary>
     public class ShieldState : Base
     {
-        public bool ShieldsUp { get; set; }
+        public string ShieldsUp { get; set; }
 
         //Default Constructor
         public ShieldState()
         {
-            ShieldsUp = Bool();
+            ShieldsUp = Str();
         }
     }
 

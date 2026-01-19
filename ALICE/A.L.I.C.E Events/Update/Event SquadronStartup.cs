@@ -11,14 +11,20 @@ namespace ALICE_Events
     /// </summary>
     public class SquadronStartup : Base
     {
+        public decimal SquadronID { get; set; }
         public string SquadronName { get; set; }
         public decimal CurrentRank { get; set; }
+        public string CurrentRankName { get; set; }
+        public string CurrentRankName_Localised { get; set; }
 
         //Default Constructor
         public SquadronStartup()
         {
+            SquadronID = Dec();
             SquadronName = Str();
             CurrentRank = Dec();
+            CurrentRankName = Str();
+            CurrentRankName_Localised = Str();
         }
     }
 

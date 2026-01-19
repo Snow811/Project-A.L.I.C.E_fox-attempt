@@ -14,6 +14,8 @@ namespace ALICE_Events
         public decimal Combat { get; set; }
         public decimal Trade { get; set; }
         public decimal Explore { get; set; }
+        public decimal Soldier { get; set; }
+        public decimal Exobiologist { get; set; }
         public decimal Empire { get; set; }
         public decimal Federation { get; set; }
         public decimal CQC { get; set; }
@@ -24,6 +26,8 @@ namespace ALICE_Events
             Combat = Dec();
             Trade = Dec();
             Explore = Dec();
+            Soldier = Dec();
+            Exobiologist = Dec();
             Empire = Dec();
             Federation = Dec();
             CQC = Dec();

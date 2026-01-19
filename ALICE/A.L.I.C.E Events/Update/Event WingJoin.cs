@@ -12,12 +12,12 @@ namespace ALICE_Events
     /// </summary>
     public class WingJoin : Base
     {
-        public List<string> Others { get; set; }
+        public string Others { get; set; }
 
         //Default Constructor
         public WingJoin()
         {
-            Others = new List<string>();
+            Others = Str();
         }
     }
 

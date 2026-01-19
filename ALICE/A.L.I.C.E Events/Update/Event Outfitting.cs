@@ -23,14 +23,9 @@ namespace ALICE_Events
     /// </summary>
     public class Outfitting : Base
     {
-        //Shared Properties
         public decimal MarketID { get; set; }
         public string StationName { get; set; }
         public string StarSystem { get; set; }
-
-        //Outfitting.Json Properties
-        public bool Horizons { get; set; }
-        public List<OutfittingItem> Items { get; set; }
 
         //Default Constructor
         public Outfitting()
@@ -38,22 +33,6 @@ namespace ALICE_Events
             MarketID = Dec();
             StationName = Str();
             StarSystem = Str();
-            Horizons = Bool();
-            Items = new List<OutfittingItem>();
-        }
-
-        public class OutfittingItem : Catch
-        {
-            public decimal id { get; set; }
-            public string Name { get; set; }
-            public decimal BuyPrice { get; set; }
-
-            public OutfittingItem()
-            {
-                id = Dec();
-                Name = Str();
-                BuyPrice = Dec();
-            }
         }
     }
 

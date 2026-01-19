@@ -15,7 +15,7 @@ namespace ALICE_Events
         public decimal MarketID { get; set; }
         public string StationName { get; set; }
         public string StarSystem { get; set; }
-        public List<Item> Items { get; set; }
+        public string Items { get; set; }
 
         //Default Constructor
         public StoredModules()
@@ -23,41 +23,7 @@ namespace ALICE_Events
             MarketID = Dec();
             StationName = Str();
             StarSystem = Str();
-            Items = new List<Item>();
-        }
-
-        public class Item : Catch
-        {
-            public string Name { get; set; }
-            public string Name_Localised { get; set; }
-            public decimal StorageSlot { get; set; }
-            public string StarSystem { get; set; }
-            public decimal MarketID { get; set; }
-            public decimal TransferCost { get; set; }
-            public decimal TransferTime { get; set; }
-            public decimal BuyPrice { get; set; }
-            public bool Hot { get; set; }
-            public string EngineerModifications { get; set; }
-            public decimal Level { get; set; }
-            public decimal Quality { get; set; }
-            public bool InTransit { get; set; }
-
-            public Item()
-            {
-                Name = Str();
-                Name_Localised = Str();
-                StorageSlot = Dec();
-                StarSystem = Str();
-                MarketID = Dec();
-                TransferCost = Dec();
-                TransferTime = Dec();
-                BuyPrice = Dec();
-                Hot = Bool();
-                EngineerModifications = Str();
-                Level = Dec();
-                Quality = Dec();
-                InTransit = Bool();
-            }
+            Items = Str();
         }
     }
 

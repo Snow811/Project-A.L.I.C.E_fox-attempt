@@ -14,106 +14,34 @@ namespace ALICE_Events
     {
         public string Faction { get; set; }
         public string Name { get; set; }
+        public string LocalisedName { get; set; }
         public decimal MissionID { get; set; }
         public string TargetType { get; set; }
         public string TargetType_Localised { get; set; }
-        public string Commodity { get; set; }
-        public string Commodity_Localised { get; set; }
-        public decimal Count { get; set; }
         public string TargetFaction { get; set; }
         public decimal KillCount { get; set; }
         public string DestinationSystem { get; set; }
         public string DestinationStation { get; set; }
-        public string Target { get; set; }
-        public string Target_Localised { get; set; }
         public decimal Reward { get; set; }
-        public List<MatReward> MaterialsReward { get; set; }
-        public List<MatReward> CommodityReward { get; set; }
-        public decimal Donation { get; set; }
-        public List<FactionReport> FactionEffects { get; set; }
+        public string MaterialsReward { get; set; }
+        public string FactionEffects { get; set; }
 
         //Default Constructor
         public MissionCompleted()
         {
             Faction = Str();
             Name = Str();
+            LocalisedName = Str();
+            MissionID = Dec();
             TargetType = Str();
             TargetType_Localised = Str();
-            Donation = Dec();
-            Commodity = Str();
-            Commodity_Localised = Str();
-            Count = Dec();
             TargetFaction = Str();
             KillCount = Dec();
             DestinationSystem = Str();
             DestinationStation = Str();
-            Target = Str();
-            Target_Localised = Str();
             Reward = Dec();
-            MissionID = Dec();
-            MaterialsReward = new List<MatReward>();
-            CommodityReward = new List<MatReward>();
-            FactionEffects = new List<FactionReport>();
-        }
-
-        public class MatReward : Catch
-        {
-            public string Name { get; set; }
-            public string Name_Localised { get; set; }
-            public string Category { get; set; }
-            public string Category_Localised { get; set; }
-            public decimal Count { get; set; }
-
-            public MatReward()
-            {
-                Name = Str();
-                Name_Localised = Str();
-                Category = Str();
-                Category_Localised = Str();
-                Count = Dec();
-            }
-        }
-
-        public class FactionReport : Catch
-        {
-            public string Faction { get; set; }
-            public string Reputation { get; set; }
-            public List<FactionEffect> Effects { get; set; }
-            public List<FactionInfluence> Influence { get; set; }
-
-            public FactionReport()
-            {
-                Faction = Str();
-                Reputation = Str();
-                Effects = new List<FactionEffect>();
-                Influence = new List<FactionInfluence>();
-            }
-        }
-
-        public class FactionEffect : Catch
-        {
-            public string Effect { get; set; }
-            public string Effect_Localised { get; set; }
-            public string Trend { get; set; }
-
-            public FactionEffect()
-            {
-                Effect = Str();
-                Effect_Localised = Str();
-                Trend = Str();
-            }
-        }
-
-        public class FactionInfluence : Catch
-        {
-            public decimal SystemAddress { get; set; }
-            public string Trend { get; set; }
-
-            public FactionInfluence()
-            {
-                SystemAddress = Dec();
-                Trend = Str();
-            }
+            MaterialsReward = Str();
+            FactionEffects = Str();
         }
     }
 

@@ -11,14 +11,14 @@ namespace ALICE_Events
     /// </summary>
     public class Friends : Base
     {
-        public string Name { get; set; }
         public string Status { get; set; }
+        public string Name { get; set; }
 
         //Default Constructor
         public Friends()
         {
-            Name = Str();
             Status = Str();
+            Name = Str();
         }
     }
 

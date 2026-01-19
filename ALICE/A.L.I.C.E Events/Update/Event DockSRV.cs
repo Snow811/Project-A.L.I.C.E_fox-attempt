@@ -13,7 +13,17 @@ namespace ALICE_Events
     /// </summary>
     public class DockSRV : Base
     {
-        //No Properties
+        public string SRVType { get; set; }
+        public string SRVType_Localised { get; set; }
+        public decimal ID { get; set; }
+
+        //Default Constructor
+        public DockSRV()
+        {
+            SRVType = Str();
+            SRVType_Localised = Str();
+            ID = Dec();
+        }
     }
 
     /// <summary>

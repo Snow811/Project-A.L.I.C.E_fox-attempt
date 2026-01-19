@@ -13,28 +13,15 @@ namespace ALICE_Events
     public class Synthesis : Base
     {
         public string Name { get; set; }
-        public List<SynthMaterial> Materials { get; set; }
+        public string Materials { get; set; }
 
         //Default Constructor
         public Synthesis()
         {
             Name = Str();
-            Materials = new List<SynthMaterial>();
-        }
-
-        public class SynthMaterial : Catch
-        {
-            public string Name { get; set; }
-            public decimal Count { get; set; }
-
-            public SynthMaterial()
-            {
-                Name = Str();
-                Count = Dec();
-            }
+            Materials = Str();
         }
     }
-
 
     /// <summary>
     /// Event Logic & Data Storage Class

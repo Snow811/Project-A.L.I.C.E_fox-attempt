@@ -13,14 +13,14 @@ namespace ALICE_Events
     {
         public string Option { get; set; }
         public decimal Cost { get; set; }
-        public bool Bankrupt { get; set; }
+        public string Bankrupt { get; set; }
 
         //Default Constructor
         public Resurrect()
         {
             Option = Str();
             Cost = Dec();
-            Bankrupt = Bool();
+            Bankrupt = Str();
         }
     }
 

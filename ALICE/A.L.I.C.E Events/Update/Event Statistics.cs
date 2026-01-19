@@ -11,342 +11,44 @@ namespace ALICE_Events
     /// </summary>
     public class Statistics : Base
     {
-        public BankAccountStat Bank_Account { get; set; }
-        public CombatStat Combat { get; set; }
-        public CrimeStat Crime { get; set; }
-        public SmugglingStat Smuggling { get; set; }
-        public TradingStat Trading { get; set; }
-        public MiningStat Mining { get; set; }
-        public ExplorationStat Exploration { get; set; }
-        public PassengersStat Passengers { get; set; }
-        public Search_And_RescueStat Search_And_Rescue { get; set; }
-        public CraftingStat Crafting { get; set; }
-        public CrewStat Crew { get; set; }
-        public MulticrewStat Multicrew { get; set; }
-        public Material_TraderStat Material_Trader_Stats { get; set; }
-        public TG_Encounters TG_ENCOUNTERS { get; set; }
-        public CQCStat CQC { get; set; }
+        public string Bank_Account { get; set; }
+        public string Combat { get; set; }
+        public string Crime { get; set; }
+        public string Smuggling { get; set; }
+        public string Trading { get; set; }
+        public string Mining { get; set; }
+        public string Exploration { get; set; }
+        public string Passengers { get; set; }
+        public string Search_And_Rescue { get; set; }
+        public string Squadron { get; set; }
+        public string Crafting { get; set; }
+        public string Crew { get; set; }
+        public string Multicrew { get; set; }
+        public string Material_Trader_Stats { get; set; }
+        public string CQC { get; set; }
+        public string FLEETCARRIER { get; set; }
+        public string Exobiology { get; set; }
 
         //Default Constructor
         public Statistics()
         {
-            Bank_Account = new BankAccountStat();
-            Combat = new CombatStat();
-            Crime = new CrimeStat();
-            Smuggling = new SmugglingStat();
-            Trading = new TradingStat();
-            Mining = new MiningStat();
-            Exploration = new ExplorationStat();
-            Passengers = new PassengersStat();
-            Search_And_Rescue = new Search_And_RescueStat();
-            Crafting = new CraftingStat();
-            Crew = new CrewStat();
-            Multicrew = new MulticrewStat();
-            Material_Trader_Stats = new Material_TraderStat();
-            TG_ENCOUNTERS = new TG_Encounters();
-            CQC = new CQCStat();
-        }
-
-        public class BankAccountStat : Catch
-        {
-            public decimal Current_Wealth { get; set; }
-            public decimal Spent_On_Ships { get; set; }
-            public decimal Spent_On_Outfitting { get; set; }
-            public decimal Spent_On_Repairs { get; set; }
-            public decimal Spent_On_Fuel { get; set; }
-            public decimal Spent_On_Ammo_Consumables { get; set; }
-            public decimal Insurance_Claims { get; set; }
-            public decimal Spent_On_Insurance { get; set; }
-            public decimal Owned_Ship_Count { get; set; }
-
-            public BankAccountStat()
-            {
-                Current_Wealth = Dec();
-                Spent_On_Ships = Dec();
-                Spent_On_Outfitting = Dec();
-                Spent_On_Repairs = Dec();
-                Spent_On_Fuel = Dec();
-                Spent_On_Ammo_Consumables = Dec();
-                Insurance_Claims = Dec();
-                Spent_On_Insurance = Dec();
-                Owned_Ship_Count = Dec();
-            }
-        }
-
-        public class CombatStat : Catch
-        {
-            public decimal Bounties_Claimed { get; set; }
-            public decimal Bounty_Hunting_Profit { get; set; }
-            public decimal Combat_Bonds { get; set; }
-            public decimal Combat_Bond_Profits { get; set; }
-            public decimal Assassinations { get; set; }
-            public decimal Assassination_Profits { get; set; }
-            public decimal Highest_Single_Reward { get; set; }
-            public decimal Skimmers_Killed { get; set; }
-
-            public CombatStat()
-            {
-                Bounties_Claimed = Dec();
-                Bounty_Hunting_Profit = Dec();
-                Combat_Bonds = Dec();
-                Combat_Bond_Profits = Dec();
-                Assassinations = Dec();
-                Assassination_Profits = Dec();
-                Highest_Single_Reward = Dec();
-                Skimmers_Killed = Dec();
-            }
-        }
-
-        public class CrimeStat : Catch
-        {
-            public decimal Notoriety { get; set; }
-            public decimal Fines { get; set; }
-            public decimal Total_Fines { get; set; }
-            public decimal Bounties_Received { get; set; }
-            public decimal Total_Bounties { get; set; }
-            public decimal Highest_Bounty { get; set; }
-
-            public CrimeStat()
-            {
-                Notoriety = Dec();
-                Fines = Dec();
-                Total_Fines = Dec();
-                Bounties_Received = Dec();
-                Total_Bounties = Dec();
-                Highest_Bounty = Dec();
-            }
-        }
-
-        public class SmugglingStat : Catch
-        {
-            public decimal Black_Markets_Traded_With { get; set; }
-            public decimal Black_Markets_Profits { get; set; }
-            public decimal Resources_Smuggled { get; set; }
-            public decimal Average_Profit { get; set; }
-            public decimal Highest_Single_Transaction { get; set; }
-
-            public SmugglingStat()
-            {
-                Black_Markets_Traded_With = Dec();
-                Black_Markets_Profits = Dec();
-                Resources_Smuggled = Dec();
-                Average_Profit = Dec();
-                Highest_Single_Transaction = Dec();                
-            }
-        }
-
-        public class TradingStat : Catch
-        {
-            public decimal Markets_Traded_With { get; set; }
-            public decimal Market_Profits { get; set; }
-            public decimal Resources_Traded { get; set; }
-            public decimal Average_Profit { get; set; }
-            public decimal Highest_Single_Transaction { get; set; }
-
-            public TradingStat()
-            {
-                Markets_Traded_With = Dec();
-                Market_Profits = Dec();
-                Resources_Traded = Dec();
-                Average_Profit = Dec();
-                Highest_Single_Transaction = Dec();
-            }
-        }
-
-        public class MiningStat : Catch
-        {
-            public decimal Mining_Profits { get; set; }
-            public decimal Quantity_Mined { get; set; }
-            public decimal Materials_Collected { get; set; }
-
-            public MiningStat()
-            {
-                Mining_Profits = Dec();
-                Quantity_Mined = Dec();
-                Materials_Collected = Dec();
-            }
-        }
-
-        public class ExplorationStat : Catch
-        {
-            public decimal Systems_Visited { get; set; }
-            public decimal Exploration_Profits { get; set; }
-            public decimal Planets_Scanned_To_Level_2 { get; set; }
-            public decimal Planets_Scanned_To_Level_3 { get; set; }
-            public decimal Efficient_Scans { get; set; }
-            public decimal Highest_Payout { get; set; }
-            public decimal Total_Hyperspace_Distance { get; set; }
-            public decimal Total_Hyperspace_Jumps { get; set; }
-            public decimal Greatest_Distance_From_Start { get; set; }
-            public decimal Time_Played { get; set; }
-
-            public ExplorationStat()
-            {
-                Systems_Visited = Dec();
-                Exploration_Profits = Dec();
-                Planets_Scanned_To_Level_2 = Dec();
-                Planets_Scanned_To_Level_3 = Dec();
-                Efficient_Scans = Dec();
-                Highest_Payout = Dec();
-                Total_Hyperspace_Distance = Dec();
-                Total_Hyperspace_Jumps = Dec();
-                Greatest_Distance_From_Start = Dec();
-                Time_Played = Dec();
-            }
-        }
-
-        public class PassengersStat : Catch
-        {
-            public decimal Passengers_Missions_Accepted { get; set; }
-            public decimal Passengers_Missions_Disgruntled { get; set; }
-            public decimal Passengers_Missions_Bulk { get; set; }
-            public decimal Passengers_Missions_VIP { get; set; }
-            public decimal Passengers_Missions_Delivered { get; set; }
-            public decimal Passengers_Missions_Ejected { get; set; }
-
-            public PassengersStat()
-            {
-                Passengers_Missions_Accepted = Dec();
-                Passengers_Missions_Disgruntled = Dec();
-                Passengers_Missions_Bulk = Dec();
-                Passengers_Missions_VIP = Dec();
-                Passengers_Missions_Delivered = Dec();
-                Passengers_Missions_Ejected = Dec();
-            }
-        }
-
-        public class Search_And_RescueStat : Catch
-        {
-            public decimal SearchRescue_Traded { get; set; }
-            public decimal SearchRescue_Profit { get; set; }
-            public decimal SearchRescue_Count { get; set; }
-
-            public Search_And_RescueStat()
-            {
-                SearchRescue_Traded = Dec();
-                SearchRescue_Profit = Dec();
-                SearchRescue_Count = Dec();
-            }
-        }
-
-        public class TG_Encounters : Catch
-        {
-            public decimal TG_ENCOUNTER_IMPRINT { get; set; }
-            public decimal TG_ENCOUNTER_TOTAL { get; set; }
-            public string TG_ENCOUNTER_TOTAL_LAST_SYSTEM { get; set; }
-            public DateTime TG_ENCOUNTER_TOTAL_LAST_TIMESTAMP { get; set; }
-            public string TG_ENCOUNTER_TOTAL_LAST_SHIP { get; set; }
-            public decimal TG_SCOUT_COUNT { get; set; }
-
-            public TG_Encounters()
-            {
-                TG_ENCOUNTER_IMPRINT = Dec();
-                TG_ENCOUNTER_TOTAL = Dec();
-                TG_ENCOUNTER_TOTAL_LAST_SYSTEM = Str();
-                TG_ENCOUNTER_TOTAL_LAST_TIMESTAMP = Dtg();
-                TG_ENCOUNTER_TOTAL_LAST_SHIP = Str();
-                TG_SCOUT_COUNT = Dec();
-            }
-        }
-
-        public class CraftingStat : Catch
-        {
-            public decimal Count_Of_Used_Engineers { get; set; }
-            public decimal Recipes_Generated { get; set; }
-            public decimal Recipes_Generated_Rank_1 { get; set; }
-            public decimal Recipes_Generated_Rank_2 { get; set; }
-            public decimal Recipes_Generated_Rank_3 { get; set; }
-            public decimal Recipes_Generated_Rank_4 { get; set; }
-            public decimal Recipes_Generated_Rank_5 { get; set; }
-
-            public CraftingStat()
-            {
-                Count_Of_Used_Engineers = Dec();
-                Recipes_Generated = Dec();
-                Recipes_Generated_Rank_1 = Dec();
-                Recipes_Generated_Rank_2 = Dec();
-                Recipes_Generated_Rank_3 = Dec();
-                Recipes_Generated_Rank_4 = Dec();
-                Recipes_Generated_Rank_5 = Dec();
-            }
-        }
-
-        public class CrewStat : Catch
-        {
-            public decimal NpcCrew_TotalWages { get; set; }
-            public decimal NpcCrew_Hired { get; set; }
-            public decimal NpcCrew_Fired { get; set; }
-            public decimal NpcCrew_Died { get; set; }
-
-            public CrewStat()
-            {
-                NpcCrew_TotalWages = Dec();
-                NpcCrew_Hired = Dec();
-                NpcCrew_Fired = Dec();
-                NpcCrew_Died = Dec();
-            }
-        }
-
-        public class MulticrewStat : Catch
-        {
-            public decimal Multicrew_Time_Total { get; set; }
-            public decimal Multicrew_Gunner_Time_Total { get; set; }
-            public decimal Multicrew_Fighter_Time_Total { get; set; }
-            public decimal Multicrew_Credits_Total { get; set; }
-            public decimal Multicrew_Fines_Total { get; set; }
-
-            public MulticrewStat()
-            {
-                Multicrew_Time_Total = Dec();
-                Multicrew_Gunner_Time_Total = Dec();
-                Multicrew_Fighter_Time_Total = Dec();
-                Multicrew_Credits_Total = Dec();
-                Multicrew_Fines_Total = Dec();
-            }
-        }
-
-        public class Material_TraderStat : Catch
-        {
-            public decimal Trades_Completed { get; set; }
-            public decimal Materials_Traded { get; set; }
-            public decimal Encoded_Materials_Traded { get; set; }
-            public decimal Raw_Materials_Traded { get; set; }
-            public decimal Grade_1_Materials_Traded { get; set; }
-            public decimal Grade_2_Materials_Traded { get; set; }
-            public decimal Grade_3_Materials_Traded { get; set; }
-            public decimal Grade_4_Materials_Traded { get; set; }
-            public decimal Grade_5_Materials_Traded { get; set; }
-
-            public Material_TraderStat()
-            {
-                Trades_Completed = Dec();
-                Materials_Traded = Dec();
-                Encoded_Materials_Traded = Dec();
-                Raw_Materials_Traded = Dec();
-                Grade_1_Materials_Traded = Dec();
-                Grade_2_Materials_Traded = Dec();
-                Grade_3_Materials_Traded = Dec();
-                Grade_4_Materials_Traded = Dec();
-                Grade_5_Materials_Traded = Dec();
-            }
-        }
-
-        public class CQCStat : Catch
-        {
-            public decimal CQC_Credits_Earned { get; set; }
-            public decimal CQC_Time_Played { get; set; }
-            public decimal CQC_KD { get; set; }
-            public decimal CQC_Kills { get; set; }
-            public decimal CQC_WL { get; set; }
-
-            public CQCStat()
-            {
-                CQC_Credits_Earned = Dec();
-                CQC_Time_Played = Dec();
-                CQC_KD = Dec();
-                CQC_Kills = Dec();
-                CQC_WL = Dec();
-            }
+            Bank_Account = Str();
+            Combat = Str();
+            Crime = Str();
+            Smuggling = Str();
+            Trading = Str();
+            Mining = Str();
+            Exploration = Str();
+            Passengers = Str();
+            Search_And_Rescue = Str();
+            Squadron = Str();
+            Crafting = Str();
+            Crew = Str();
+            Multicrew = Str();
+            Material_Trader_Stats = Str();
+            CQC = Str();
+            FLEETCARRIER = Str();
+            Exobiology = Str();
         }
     }
 

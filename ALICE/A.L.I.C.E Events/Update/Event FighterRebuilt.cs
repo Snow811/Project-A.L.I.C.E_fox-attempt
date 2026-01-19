@@ -14,11 +14,13 @@ namespace ALICE_Events
     public class FighterRebuilt : Base
     {
         public string Loadout { get; set; }
+        public decimal ID { get; set; }
 
         //Default Constructor
         public FighterRebuilt()
         {
             Loadout = Str();
+            ID = Dec();
         }
     }
 

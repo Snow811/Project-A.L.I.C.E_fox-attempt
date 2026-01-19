@@ -17,10 +17,7 @@ namespace ALICE_Events
         public string RetrievedItem_Localised { get; set; }
         public string Ship { get; set; }
         public decimal ShipID { get; set; }
-        public bool Hot { get; set; }
-        public string EngineerModifications { get; set; }
-        public decimal Level { get; set; }
-        public decimal Quality { get; set; }
+        public string Hot { get; set; }
         public string SwapOutItem { get; set; }
         public string SwapOutItem_Localised { get; set; }
 
@@ -33,10 +30,7 @@ namespace ALICE_Events
             RetrievedItem_Localised = Str();
             Ship = Str();
             ShipID = Dec();
-            Hot = Bool();
-            EngineerModifications = Str();
-            Level = Dec();
-            Quality = Dec();
+            Hot = Str();
             SwapOutItem = Str();
             SwapOutItem_Localised = Str();
         }
